@@ -841,31 +841,32 @@
       </div>
     </div>
   </div>
+  <div class="atelier-form">
+  <h2 class="h2 rv">Request a<br><em>Consultation</em></h2>
   <form action="https://formspree.io/f/xojrlywj" method="POST">
-   <h2 class="h2 rv">Request a<br><em>Consultation</em></h2>
     <div class="frow rv d1">
-      <input type="text" class="fi" placeholder="First Name" name="first_name" required>
-      <input type="text" class="fi" placeholder="Last Name" name="last_name" required>
+      <div class="fg"><label class="fl">First Name</label><input type="text" class="fi" name="first_name" placeholder="Your first name" required></div>
+      <div class="fg"><label class="fl">Last Name</label><input type="text" class="fi" name="last_name" placeholder="Your last name" required></div>
     </div>
-    <input type="email" class="fi" placeholder="Email Address" name="email" required>
-    <div class="fg rv d1"><label class="fl">Phone</label><input type="tel" class="fi" placeholder="+254 ..."></div>
+    <div class="fg rv d1"><label class="fl">Email Address</label><input type="email" class="fi" name="email" placeholder="your@email.com" required></div>
+    <div class="fg rv d1"><label class="fl">Phone</label><input type="tel" class="fi" name="phone" placeholder="+254 ..."></div>
     <div class="fg rv d2">
-     <select class="fsel" name="commission_type">
-      <select class="fsel">
+      <label class="fl">Type of Commission</label>
+      <select class="fsel" name="commission_type">
         <option value="" disabled selected>Select a commission type</option>
-        <option>Engagement Ring</option>
-        <option>Wedding Band</option>
-        <option>Necklace / Pendant</option>
-        <option>Earrings</option>
-        <option>Bracelet / Bangle</option>
-        <option>Loose Gemstone Acquisition</option>
-        <option>Full Custom Bespoke Design</option>
-        <option>I'm not sure yet — I'd like to explore</option>
+        <option value="Engagement Ring">Engagement Ring</option>
+        <option value="Wedding Band">Wedding Band</option>
+        <option value="Necklace / Pendant">Necklace / Pendant</option>
+        <option value="Earrings">Earrings</option>
+        <option value="Bracelet / Bangle">Bracelet / Bangle</option>
+        <option value="Loose Gemstone">Loose Gemstone Acquisition</option>
+        <option value="Full Custom">Full Custom Bespoke Design</option>
+        <option value="Undecided">I'm not sure yet — I'd like to explore</option>
       </select>
     </div>
-  <textarea class="fta" placeholder="Tell us your story..." name="message"></textarea>
-<button type="submit" class="bsub rv d3" id="asub">Request My Consultation</button>
-</div>
+    <div class="fg rv d2"><label class="fl">Tell Us Your Story</label><textarea class="fta" name="message" style="height:80px" placeholder="Share your vision, the occasion, or any initial thoughts. There are no wrong answers."></textarea></div>
+    <button type="submit" class="bsub rv d3" id="asub">Request My Consultation</button>
+  </form>
 </div>
 
 <!-- INSTAGRAM -->
