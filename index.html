@@ -842,16 +842,16 @@
     </div>
   </div>
   <form action="https://formspree.io/f/xojrlywj" method="POST">
-    <h2 class="h2 rv">Request a<br><em>Consultation</em></h2>
+   <h2 class="h2 rv">Request a<br><em>Consultation</em></h2>
     <div class="frow rv d1">
-      <input type="text" class="fi" placeholder="First Name" name="first_name" required>
-      <input type="text" class="fi" placeholder="Last Name" name="last_name" required>
+      <div class="fg"><label class="fl">First Name</label><input type="text" class="fi" placeholder="Your first name"></div>
+      <div class="fg"><label class="fl">Last Name</label><input type="text" class="fi" placeholder="Your last name"></div>
     </div>
-    <input type="email" class="fi" placeholder="Email Address" name="email" required>
-    <input type="tel" class="fi" placeholder="WhatsApp / Phone Number" name="phone" required>
+    <div class="fg rv d1"><label class="fl">Email Address</label><input type="email" class="fi" placeholder="your@email.com"></div>
+    <div class="fg rv d1"><label class="fl">Phone</label><input type="tel" class="fi" placeholder="+254 ..."></div>
     <div class="fg rv d2">
       <label class="fl">Type of Commission</label>
-     <select class="fsel" name="commission_type">
+      <select class="fsel">
         <option value="" disabled selected>Select a commission type</option>
         <option>Engagement Ring</option>
         <option>Wedding Band</option>
@@ -863,9 +863,9 @@
         <option>I'm not sure yet — I'd like to explore</option>
       </select>
     </div>
-   <textarea class="fta" placeholder="Tell us your story..." name="message"></textarea>
-   <button type="submit" class="bsub rv d3" id="asub">Request My Consultation</button>
-  </div>
+    <div class="fg rv d2"><label class="fl">Tell Us Your Story</label><textarea class="fta" style="height:80px" placeholder="Share your vision, the occasion, or any initial thoughts. There are no wrong answers."></textarea></div>
+<button type="submit" class="bsub rv d3" id="asub">Request My Consultation</button>
+</div>
 </div>
 
 <!-- INSTAGRAM -->
