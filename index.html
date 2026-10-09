@@ -19,11 +19,9 @@
     }
     html{scroll-behavior:smooth}
     body{background:var(--w);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none}
-
     /* ─── Cursor ─── */
     #cur{width:6px;height:6px;background:var(--g);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
     #cur-r{width:28px;height:28px;border:1px solid var(--g);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s ease;opacity:.35}
-
     /* ─── Nav ─── */
     nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:22px 56px;transition:background .45s,padding .4s,box-shadow .4s}
     nav.on{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:14px 56px;box-shadow:0 1px 0 var(--bd)}
@@ -37,7 +35,6 @@
     .ncta{font-size:.65rem!important;font-weight:400!important;letter-spacing:.15em!important;color:var(--w)!important;background:var(--g);padding:10px 22px!important;transition:background .3s!important}
     .ncta:hover{background:var(--gm)!important}
     nav.on .ncta{color:var(--w)!important}
-
     /* ─── Hero — full bleed editorial ─── */
     .hero{position:relative;height:100vh;min-height:700px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
     .hero-left{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 100px;z-index:2;background:linear-gradient(160deg,var(--gd) 0%,var(--g) 100%)}
@@ -53,7 +50,6 @@
     .hero:hover .hero-right img{transform:scale(1.04)}
     .hero-right::before{content:'';position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,var(--gd),transparent);z-index:1}
     .hero-caption{position:absolute;bottom:32px;right:28px;z-index:2;font-family:var(--body);font-style:italic;font-size:.8rem;color:rgba(255,255,255,.45);letter-spacing:.08em;writing-mode:vertical-rl}
-
     /* ─── Buttons ─── */
     .btn{font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .3s;cursor:none;border:none}
     .btn-solid{color:var(--w);background:var(--g);padding:14px 34px}
@@ -62,14 +58,12 @@
     .btn-ghost-w:hover{border-color:rgba(255,255,255,.75);color:var(--w)}
     .btn-ghost-g{color:var(--g);border:1px solid var(--g);padding:13px 30px}
     .btn-ghost-g:hover{background:var(--g);color:var(--w)}
-
     /* ─── Marquee ─── */
     .mq{background:var(--g);overflow:hidden;padding:12px 0}
     .mq-t{display:flex;animation:mq 35s linear infinite;width:max-content}
     .mq-t span{font-size:.58rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:0 36px;white-space:nowrap}
     .mq-t .dot{color:rgba(255,255,255,.3);padding:0 2px;letter-spacing:0}
     @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
     /* ─── Story Section ─── */
     .story{display:grid;grid-template-columns:45% 55%;min-height:80vh}
     .story-img{position:relative;overflow:hidden}
@@ -89,42 +83,25 @@
     .stat+.stat{border-left:1px solid var(--bd);padding-left:20px}
     .stat-n{font-family:var(--serif);font-size:2.8rem;font-weight:400;color:var(--g);line-height:1}
     .stat-l{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--is);margin-top:6px}
-
     /* ─── Chapter Divider ─── */
     .chapter{padding:80px 56px;display:flex;align-items:center;gap:32px;background:var(--gd)}
     .chapter-num{font-family:var(--serif);font-size:8rem;font-weight:400;color:rgba(255,255,255,.06);line-height:1;flex-shrink:0}
     .chapter-line{flex:1;height:1px;background:rgba(255,255,255,.08)}
     .chapter-title{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.4vw,2.4rem);color:rgba(255,255,255,.5);white-space:nowrap}
-
-    /* ─── Press & Media Authority Section ─── */
-    .press-section{padding:100px 56px;background:var(--gp);border-bottom:1px solid var(--bd)}
-    .press-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-    .press-card{background:var(--w);border:1px solid var(--bd);overflow:hidden;position:relative}
-    .press-img{aspect-ratio:16/10;background:var(--sg);position:relative;overflow:hidden}
-    .press-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
-    .press-card:hover .press-img img{transform:scale(1.05)}
-    .press-info{padding:28px 24px}
-    .press-tag{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:8px;font-weight:500}
-    .press-title{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--ink);margin-bottom:10px}
-    .press-desc{font-family:var(--body);font-size:.95rem;line-height:1.65;color:var(--im)}
-
     /* ─── Collections ─── */
     .collections{padding:100px 56px;background:var(--w)}
     .col-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px}
     .col-link{font-size:.63rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--g);text-decoration:none;border-bottom:1px solid var(--g);padding-bottom:2px;transition:opacity .3s}
     .col-link:hover{opacity:.6}
-
     /* Collection Tabs */
-    .col-tabs{display:flex;gap:0;margin-bottom:48px;border-bottom:1px solid var(--bd)}
-    .col-tab{font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--is);padding:12px 28px 14px;cursor:none;border:none;background:transparent;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s}
+    .col-tabs{display:flex;gap:0;margin-bottom:48px;border-bottom:1px solid var(--bd);overflow-x:auto}
+    .col-tab{font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--is);padding:12px 28px 14px;cursor:none;border:none;background:transparent;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s;white-space:nowrap}
     .col-tab.active{color:var(--g);border-bottom-color:var(--g)}
     .col-tab:hover{color:var(--g)}
-
     .col-panel{display:none}
     .col-panel.active{display:block}
-
-    /* Product grid */
-    .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    /* Product grid — Expanded structure for dropping multiple pieces */
+    .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 16px}
     .pgrid.four{grid-template-columns:repeat(4,1fr)}
     .pcard{background:var(--w);cursor:none;position:relative}
     .pimg{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--sg)}
@@ -147,7 +124,6 @@
     .penq:hover{background:var(--gm)}
     .pwish{font-size:.9rem;color:var(--is);background:transparent;border:1px solid var(--bd);padding:12px 14px;cursor:none;transition:border-color .3s,color .3s}
     .pwish:hover{border-color:var(--g);color:var(--g)}
-
     /* ─── Gemstones Story ─── */
     .gems-story{background:var(--gd);padding:0}
     .gems-story-top{padding:100px 56px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -170,7 +146,6 @@
     .gem-dots{display:flex;gap:4px}
     .gem-dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.15)}
     .gem-dots span.on{background:#8de8b8}
-
     /* ─── Origin Story ─── */
     .origin{display:grid;grid-template-columns:55% 45%;min-height:75vh}
     .origin-text{background:var(--g);padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
@@ -182,7 +157,6 @@
     .origin-text .pull-quote{color:#8de8b8;border-color:#8de8b8}
     .origin-img{position:relative;overflow:hidden}
     .origin-img img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.08) saturate(1.1)}
-
     /* ─── Process Timeline ─── */
     .process{padding:100px 56px;background:var(--ow)}
     .process-intro{max-width:520px;margin-bottom:72px}
@@ -194,7 +168,6 @@
     .tl-icon{width:40px;height:2px;background:var(--g);margin-bottom:20px}
     .tl-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:12px}
     .tl-desc{font-family:var(--body);font-size:.95rem;line-height:1.8;color:var(--im)}
-
     /* ─── Atelier / Location ─── */
     .atelier{display:grid;grid-template-columns:1fr 1fr;gap:0}
     .atelier-map{background:var(--gd);padding:80px 72px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
@@ -219,12 +192,10 @@
     .frow{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .bsub{font-family:var(--sans);font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--w);background:var(--g);border:none;padding:16px 0;cursor:none;width:100%;margin-top:12px;transition:background .3s}
     .bsub:hover{background:var(--gm)}
-
-    /* ─── Instagram ─── */
+    /* ─── Media / Authority Section ─── */
     .ig{padding:80px 56px;background:var(--sg);text-align:center}
     .ig .h2{text-align:center;margin:0 auto 12px;font-size:2.4rem}
-    .ig p{font-family:var(--body);font-style:italic;font-size:1.1rem;color:var(--is);margin-bottom:36px}
-
+    .ig p{font-family:var(--body);font-style:italic;font-size:1.1rem;color:var(--is);margin-bottom:36px;line-height:1.7}
     /* ─── Footer ─── */
     footer{background:var(--ink);padding:80px 56px 0}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.07)}
@@ -241,7 +212,6 @@
     .fbot{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
     .fcopy{font-size:.62rem;color:rgba(255,255,255,.18);letter-spacing:.08em}
     .fstrap{font-family:var(--body);font-style:italic;font-size:.78rem;color:rgba(255,255,255,.16)}
-
     /* ─── Modal ─── */
     .moverlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
     .moverlay.open{opacity:1;pointer-events:all}
@@ -252,12 +222,10 @@
     .mtitle{font-family:var(--serif);font-size:2.1rem;font-weight:400;color:var(--ink);margin-bottom:6px}
     .mstone{font-family:var(--body);font-style:italic;font-size:1rem;color:var(--is);margin-bottom:24px}
     .mnote{font-family:var(--body);font-size:.92rem;line-height:1.75;color:var(--im);margin-bottom:28px;padding:16px 20px;background:var(--gp);border-left:3px solid var(--g)}
-
     /* ─── Reveal ─── */
     .rv{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
     .rv.in{opacity:1;transform:none}
     .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
-
     /* ─── Responsive ─── */
     @media(max-width:1100px){
       .pgrid.four{grid-template-columns:repeat(3,1fr)}
@@ -270,9 +238,9 @@
       .hero-right{height:50vw}
       .story,.origin,.atelier{grid-template-columns:1fr}
       .story-img,.origin-img{min-height:360px}
-      .story-text,.origin-text,.atelier-map,.atelier-form,.press-section{padding:64px 32px}
+      .story-text,.origin-text,.atelier-map,.atelier-form{padding:64px 32px}
       .collections,.gems-story-top,.process,.ig{padding:72px 24px}
-      .gems-visual,.pgrid,.pgrid.four,.timeline,.press-grid{grid-template-columns:1fr 1fr}
+      .gems-visual,.pgrid,.pgrid.four,.timeline{grid-template-columns:1fr 1fr}
       .chapter{padding:60px 24px}
       .col-header{flex-direction:column;align-items:flex-start;gap:14px}
       footer{padding:60px 24px 0}
@@ -283,7 +251,7 @@
       .gems-story-top{grid-template-columns:1fr;gap:36px}
     }
     @media(max-width:580px){
-      .gems-visual,.pgrid,.pgrid.four,.timeline,.press-grid{grid-template-columns:1fr}
+      .gems-visual,.pgrid,.pgrid.four,.timeline{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr}
       .stats{flex-direction:column;gap:20px}
       .stat+.stat{border-left:none;border-top:1px solid var(--bd);padding-left:0;padding-top:20px}
@@ -291,11 +259,9 @@
   </style>
 </head>
 <body>
-
 <!-- CURSOR -->
 <div id="cur"></div>
 <div id="cur-r"></div>
-
 <!-- MODAL -->
 <div class="moverlay" id="modal">
   <div class="modal">
@@ -303,7 +269,7 @@
     <div class="mey">Hatatian Jewelry · Enquiry</div>
     <div class="mtitle" id="mt">—</div>
     <div class="mstone" id="ms">—</div>
-    <p class="mnote">Each Hatatian piece is bespoke — made by private consultation. Craftsmanship lead times range from 4 to 8 weeks depending on the dexterity and complexity of the work. We offer $100 USD flat-rate fully insured express global courier delivery with official gemological certification included. We respond within 24 hours.</p>
+    <p class="mnote">Each Hatatian piece is bespoke — made by appointment at our Mombasa atelier. Craftsmanship lead times range from 4 to 8 weeks depending on the dexterity of the work. We offer $100 USD flat insured express global courier delivery with official certification. Pricing reflects the specific stone, metal weight and setting chosen during your private consultation. We respond within 24 hours.</p>
     <div class="fg"><label class="fl">Your Name</label><input type="text" class="fi" placeholder="Full name"></div>
     <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="your@email.com"></div>
     <div class="fg"><label class="fl">Phone (optional)</label><input type="tel" class="fi" placeholder="+254 ..."></div>
@@ -311,7 +277,6 @@
     <button class="bsub" id="msub">Send Enquiry</button>
   </div>
 </div>
-
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nlogo">
@@ -319,7 +284,6 @@
   </a>
   <ul class="nlinks">
     <li><a href="#collections">Collections</a></li>
-    <li><a href="#press">Media & Press</a></li>
     <li><a href="#gemstones">Gemstones</a></li>
     <li><a href="#story">Our Story</a></li>
     <li><a href="#process">Process</a></li>
@@ -327,13 +291,12 @@
     <li><a href="#atelier" class="ncta">Book Consultation</a></li>
   </ul>
 </nav>
-
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">Stewards of Ethics for African Gemstones</div>
     <h1 class="hero-title">Jewelry born<br>from <em>Kenya's</em><br>living earth.</h1>
-    <p class="hero-tagline">Private jeweler. Bespoke commissions. Rare unenhanced Tsavorite garnets and East African gemstones traced from Taita Taveta to your hands — crafted in Mombasa, worn across the world.</p>
+    <p class="hero-tagline">Private jeweler. Bespoke commissions. Rare gemstones traced from the ground to your hands — crafted in Mombasa, worn across the world.</p>
     <div class="hero-btns">
       <a href="#collections" class="btn btn-solid">Explore Collections</a>
       <a href="#story" class="btn btn-ghost-w">Read Our Story</a>
@@ -341,37 +304,34 @@
   </div>
   <div class="hero-right">
     <img src="IMG_8671.jpeg" alt="Tsavorite Earrings">
-    <div class="hero-caption">Mombasa, Kenya · Private Jeweler</div>
+    <div class="hero-caption">Mombasa, Kenya</div>
   </div>
 </section>
-
 <!-- MARQUEE -->
 <div class="mq">
   <div class="mq-t">
-    <span>Tsavorite Garnet</span><span class="dot">◆</span><span>Taita Taveta Mine-to-Market</span><span class="dot">◆</span><span>Teal Sapphire</span><span class="dot">◆</span><span>Featured on NTV</span><span class="dot">◆</span><span>Nomad Africa Magazine</span><span class="dot">◆</span><span>NYFW Debut</span><span class="dot">◆</span><span>Paris Fashion Week 2027</span><span class="dot">◆</span><span>New York Gallery 2027</span><span class="dot">◆</span><span>$100 Insured Global Freight</span><span class="dot">◆</span><span>Handcrafted in Kenya</span><span class="dot">◆</span><span>Hatatian Gems</span><span class="dot">◆</span>
-    <span>Tsavorite Garnet</span><span class="dot">◆</span><span>Taita Taveta Mine-to-Market</span><span class="dot">◆</span><span>Teal Sapphire</span><span class="dot">◆</span><span>Featured on NTV</span><span class="dot">◆</span><span>Nomad Africa Magazine</span><span class="dot">◆</span><span>NYFW Debut</span><span class="dot">◆</span><span>Paris Fashion Week 2027</span><span class="dot">◆</span><span>New York Gallery 2027</span><span class="dot">◆</span><span>$100 Insured Global Freight</span><span class="dot">◆</span><span>Handcrafted in Kenya</span><span class="dot">◆</span><span>Hatatian Gems</span><span class="dot">◆</span>
+    <span>Tsavorite Garnet</span><span class="dot">◆</span><span>Teal Sapphire</span><span class="dot">◆</span><span>Dragon Garnet</span><span class="dot">◆</span><span>Aquamarine</span><span class="dot">◆</span><span>Spinel</span><span class="dot">◆</span><span>Handcrafted in Kenya</span><span class="dot">◆</span><span>Ethically Sourced</span><span class="dot">◆</span><span>Bespoke Commissions</span><span class="dot">◆</span><span>By Appointment · Private Jeweler</span><span class="dot">◆</span><span>Hatatian Gems</span><span class="dot">◆</span>
+    <span>Tsavorite Garnet</span><span class="dot">◆</span><span>Teal Sapphire</span><span class="dot">◆</span><span>Dragon Garnet</span><span class="dot">◆</span><span>Aquamarine</span><span class="dot">◆</span><span>Spinel</span><span class="dot">◆</span><span>Handcrafted in Kenya</span><span class="dot">◆</span><span>Ethically Sourced</span><span class="dot">◆</span><span>Bespoke Commissions</span><span class="dot">◆</span><span>By Appointment · Private Jeweler</span><span class="dot">◆</span><span>Hatatian Gems</span><span class="dot">◆</span>
   </div>
 </div>
-
 <!-- ═══ CHAPTER 01: THE STORY ═══ -->
 <div class="chapter">
   <span class="chapter-num">01</span>
   <div class="chapter-line"></div>
   <span class="chapter-title">The Origin Story</span>
 </div>
-
 <div class="story" id="story">
   <div class="story-img">
     <img src="aboutus.png" alt="Hatatian pendant">
     <div class="story-img-overlay"></div>
-    <div class="story-img-tag">Founder & Gemstone Consultant<br><span style="font-size:.78rem;opacity:.7">Hanly Mutsune</span></div>
+    <div class="story-img-tag">Founder<br><span style="font-size:.78rem;opacity:.7">Hanly Mutsune</span></div>
   </div>
   <div class="story-text">
     <div class="label rv">Our Story</div>
     <h2 class="h2 rv d1">A private jeweler<br>rooted in <em>Mombasa.</em></h2>
     <p class="prose rv d2">Hatatian Jewelry was born from a singular belief: that Africa's earth holds some of the most extraordinary gemstones in the world — and that those stones deserve to be treated with integrity, artistry, and reverence from the moment they leave the ground.</p>
     <div class="pull-quote rv d2">"We don't sell jewelry. We create heirlooms — one stone, one person, one story at a time."</div>
-    <p class="prose rv d3">As a private jeweler operating by appointment, every relationship begins with a conversation. There is no mass catalog to browse. Instead, we sit with you via virtual consultations or direct inquiries, understand your vision, and build something that outlives the moment it was made for.</p>
+    <p class="prose rv d3">As a private jeweler operating by appointment from our Mombasa Atelier, every relationship begins with a conversation. There is no catalogue to browse, no shelf to scan. Instead, via direct email inquiries or virtual appointments, we sit with you, understand your story, and build something that will outlive the moment it was made for.</p>
     <div class="stats rv d3">
       <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Ethically Traced</div></div>
       <div class="stat"><div class="stat-n">1:1</div><div class="stat-l">Private Consults</div></div>
@@ -379,98 +339,20 @@
     </div>
   </div>
 </div>
-
-<!-- ═══ DEDICATED MEDIA & PRESS AUTHORITY SECTION ═══ -->
-<section class="press-section" id="press">
-  <div class="label rv">Brand Authority & Debuts</div>
-  <h2 class="h2 rv d1">As Featured In &amp; <em>Global Showcases</em></h2>
-  <p class="prose rv d2">Building international trust as an emerging private jewelry house, featured across national media, editorial publications, and global fashion calendars.</p>
-
-  <div class="press-grid">
-    <div class="press-card rv">
-      <div class="press-img">
-        <img src="press-ntv.jpg" alt="Featured on NTV National Television">
-      </div>
-      <div class="press-info">
-        <div class="press-tag">National Broadcast</div>
-        <div class="press-title">NTV National Television</div>
-        <div class="press-desc">Spotlight feature on Hatatian's ethical gemstone stewardship and mine-to-market Tsavorite sourcing in Kenya.</div>
-      </div>
-    </div>
-
-    <div class="press-card rv d1">
-      <div class="press-img">
-        <img src="press-nomad-kenya.jpg" alt="Nomad Africa Magazine Kenya">
-      </div>
-      <div class="press-info">
-        <div class="press-tag">Editorial Feature</div>
-        <div class="press-title">Nomad Africa Magazine — Kenya</div>
-        <div class="press-desc">Featured across premium lounge and luxury travel circles showcasing East African Tsavorites and custom gold settings.</div>
-      </div>
-    </div>
-
-    <div class="press-card rv d2">
-      <div class="press-img">
-        <img src="press-nomad-sa.jpg" alt="Nomad Africa Magazine International">
-      </div>
-      <div class="press-info">
-        <div class="press-tag">International Print</div>
-        <div class="press-title">Nomad Africa — International Edition</div>
-        <div class="press-desc">Double-page editorial showcase reaching high-net-worth travelers, safari clients, and international collectors across South Africa, US, and Canada.</div>
-      </div>
-    </div>
-
-    <div class="press-card rv">
-      <div class="press-img">
-        <img src="press-nyfw.jpg" alt="New York Fashion Week Debut">
-      </div>
-      <div class="press-info">
-        <div class="press-tag">Runway Showcase</div>
-        <div class="press-title">New York Fashion Week Debut</div>
-        <div class="press-desc">Debuting high-jewelry collections featuring unenhanced Taita Taveta Tsavorites and diamonds on the New York runway.</div>
-      </div>
-    </div>
-
-    <div class="press-card rv d1">
-      <div class="press-img">
-        <img src="press-paris.jpg" alt="Paris Fashion Week Debut 2027">
-      </div>
-      <div class="press-info">
-        <div class="press-tag">Upcoming Runway Debut</div>
-        <div class="press-title">Paris Fashion Week — February 2027</div>
-        <div class="press-desc">Scheduled international debut presenting bespoke East African gemstone high jewelry during Paris Fashion Week.</div>
-      </div>
-    </div>
-
-    <div class="press-card rv d2">
-      <div class="press-img">
-        <img src="press-ny-gallery.jpg" alt="New York Consignment Gallery">
-      </div>
-      <div class="press-info">
-        <div class="press-tag">Coming Soon (2027)</div>
-        <div class="press-title">New York Gallery & Consignment Showcase</div>
-        <div class="press-desc">Physical placement in New York for private client viewings, consignment showcases, and US appointments.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══ CHAPTER 02: COLLECTIONS ═══ -->
 <div class="chapter">
   <span class="chapter-num">02</span>
   <div class="chapter-line"></div>
   <span class="chapter-title">The Collections</span>
 </div>
-
 <section class="collections" id="collections">
   <div class="col-header">
     <div>
-      <div class="label rv">Shop &amp; Enquire · Made-to-Order</div>
-      <h2 class="h2 rv d1">Hatatian <em>Curated Pieces</em></h2>
+      <div class="label rv">Shop &amp; Enquire</div>
+      <h2 class="h2 rv d1">Hatatian <em>Pieces</em></h2>
     </div>
     <a href="#atelier" class="col-link rv">Commission a Bespoke Piece →</a>
   </div>
-
   <!-- Tabs -->
   <div class="col-tabs">
     <button class="col-tab active" data-tab="green-garnet">Green Garnet Collection</button>
@@ -479,13 +361,12 @@
     <button class="col-tab" data-tab="gemstones-shop">Loose Gemstones</button>
   </div>
 
-  <!-- GREEN GARNET COLLECTION -->
+  <!-- GREEN GARNET COLLECTION (Dedicated tab with expanded placeholders for dropping many pieces) -->
   <div class="col-panel active" id="tab-green-garnet">
-    <div style="margin-bottom:32px;max-width:680px;">
-      <p class="prose" style="font-size:1rem;color:var(--im);">Discovered along the geological belt of Taita Taveta, Kenya, the Tsavorite garnet is over two hundred times rarer than emerald. Naturally unenhanced and vivid, every piece in our Green Garnet Collection honors mine-to-market traceability from local East African miners to your hands.</p>
+    <div style="margin-bottom:32px;max-width:720px;">
+      <p class="prose" style="font-size:1.05rem;color:var(--im);">Mined along the geological belt of Taita Taveta, Kenya, the Tsavorite garnet is over two hundred times rarer than emerald. Naturally unenhanced and vibrant, our Green Garnet Collection honors mine-to-market traceability from local East African miners directly to your hands.</p>
     </div>
     <div class="pgrid">
-
       <div class="pcard rv">
         <div class="pimg">
           <img src="tsavoritepend.jpeg" alt="The Tsavorite Medallion">
@@ -497,7 +378,7 @@
           <div class="pname">The Tsavorite Medallion</div>
           <div class="pstone">Unenhanced Tsavorite Garnet · 18k Yellow Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · $100 Insured Global Courier</div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
         </div>
         <div class="pacts">
           <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20The%20Tsavorite%20Medallion" class="penq">Inquire via Email</a>
@@ -516,7 +397,7 @@
           <div class="pname">Taita Tsavorite Solitaire Earrings</div>
           <div class="pstone">Unenhanced Green Garnets · 18k Gold Settings</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · $100 Insured Global Courier</div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
         </div>
         <div class="pacts">
           <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Tsavorite%20Solitaire%20Earrings" class="penq">Inquire via Email</a>
@@ -535,7 +416,7 @@
           <div class="pname">Tsavorite Solitaire Ring</div>
           <div class="pstone">Rare Green Garnet · Compass Setting 18k Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · Made to US/UK/EU sizes</div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
         </div>
         <div class="pacts">
           <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Tsavorite%20Solitaire%20Ring" class="penq">Inquire via Email</a>
@@ -543,13 +424,69 @@
         </div>
       </div>
 
+      <!-- Additional placeholders for more Green Garnet pieces -->
+      <div class="pcard rv d3">
+        <div class="pimg" style="background:#eef6f2;">
+          <img src="tsavoritepend.jpeg" alt="Taita Taveta Green Garnet Pendant">
+          <div class="pbadge">New Creation</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Taita Green Garnet Pendant','Unenhanced Tsavorite · Custom Chain')">Enquire</button></div>
+        </div>
+        <div class="pinfo">
+          <div class="pcol">Hatatian Jewelry · Green Garnet Collection</div>
+          <div class="pname">Taita Green Garnet Pendant</div>
+          <div class="pstone">Unenhanced Tsavorite · 18k Yellow Gold</div>
+          <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
+        </div>
+        <div class="pacts">
+          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Taita%20Green%20Garnet%20Pendant" class="penq">Inquire via Email</a>
+          <button class="pwish" onclick="openM('Taita Green Garnet Pendant','Unenhanced Tsavorite')">♡</button>
+        </div>
+      </div>
+
+      <div class="pcard rv d4">
+        <div class="pimg" style="background:#f2f8f5;">
+          <img src="IMG_8671.jpeg" alt="Tsavorite Line Bracelet">
+          <div class="pbadge gold">Fine High Jewelry</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Tsavorite Line Bracelet','Matched Tsavorite Garnets · 18k Gold')">Enquire</button></div>
+        </div>
+        <div class="pinfo">
+          <div class="pcol">Hatatian Jewelry · Green Garnet Collection</div>
+          <div class="pname">Tsavorite Line Bracelet</div>
+          <div class="pstone">Matched Taita Green Garnets · 18k Gold</div>
+          <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
+        </div>
+        <div class="pacts">
+          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Tsavorite%20Line%20Bracelet" class="penq">Inquire via Email</a>
+          <button class="pwish" onclick="openM('Tsavorite Line Bracelet','Matched Taita Green Garnets')">♡</button>
+        </div>
+      </div>
+
+      <div class="pcard rv d1">
+        <div class="pimg" style="background:#e8f2ee;">
+          <img src="catctus.jpg" alt="Tsavorite Accent Eternity Band">
+          <div class="pbadge">Eternity</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Tsavorite Accent Eternity Band','Green Garnets & Diamonds · 18k Gold')">Enquire</button></div>
+        </div>
+        <div class="pinfo">
+          <div class="pcol">Hatatian Jewelry · Green Garnet Collection</div>
+          <div class="pname">Tsavorite Accent Eternity Band</div>
+          <div class="pstone">Alternating Tsavorites & Diamonds · 18k Gold</div>
+          <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
+        </div>
+        <div class="pacts">
+          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Tsavorite%20Accent%20Eternity%20Band" class="penq">Inquire via Email</a>
+          <button class="pwish" onclick="openM('Tsavorite Accent Eternity Band','Green Garnets & Diamonds')">♡</button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- RINGS -->
+  <!-- RINGS (Original Rings Preserved) -->
   <div class="col-panel" id="tab-rings">
     <div class="pgrid">
-
       <div class="pcard rv">
         <div class="pimg">
           <img src="engagement.jpeg" alt="Celestial Sapphire Solitaire">
@@ -559,16 +496,15 @@
         <div class="pinfo">
           <div class="pcol">Hatatian Jewelry · The Covenant</div>
           <div class="pname">Celestial Sapphire Solitaire</div>
-          <div class="pstone">Brilliant-cut Sapphire · 18k Rose Gold</div>
+          <div class="pstone">Brilliant-cut Saphhire · 18k Rose Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · Made to US/UK/EU sizes</div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · Made to US/UK/EU sizes</div>
         </div>
         <div class="pacts">
-          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Celestial%20Sapphire%20Solitaire" class="penq">Inquire via Email</a>
-          <button class="pwish" onclick="openM('Celestial Sapphire Solitaire','Brilliant-cut Sapphire')">♡</button>
+          <a href="#" class="penq" onclick="openM('Celestial Sapphire Solitaire','Brilliant-cut Sapphire  · 18k Rose Gold');return false">Enquire</a>
+          <button class="pwish">♡</button>
         </div>
       </div>
-
       <div class="pcard rv d1">
         <div class="pimg" style="background:#e8f2ee">
           <img src="catctus.jpg" alt="A Touch of Heaven Ring">
@@ -580,39 +516,36 @@
           <div class="pname">A Touch of Heaven</div>
           <div class="pstone">Lavender Sapphires · Half Eternity 18K Yellow Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · Made to US/UK/EU sizes</div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · Made to US/UK/EU sizes</div>
         </div>
         <div class="pacts">
-          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20A%20Touch%20of%20Heaven" class="penq">Inquire via Email</a>
-          <button class="pwish" onclick="openM('A Touch of Heaven','Lavender Sapphires')">♡</button>
+          <a href="#" class="penq" onclick="openM('A Touch of Heaven','Half Eternity 18K Yellow Gold');return false">Enquire</a>
+          <button class="pwish">♡</button>
         </div>
       </div>
-
       <div class="pcard rv d2">
         <div class="pimg" style="background:#f5f0e8">
           <img src="rubyring.jpeg" alt="Tembo - Legacy Ring">
-          <div class="poverlay"><button class="pobtn" onclick="openM('Tembo - Legacy Ring','Baguette Rubies · 18k Yellow Gold')">Enquire</button></div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Tembo - Legacy Ring','Baguettes Rubies · 18k Yellow Gold')">Enquire</button></div>
         </div>
         <div class="pinfo">
           <div class="pcol">Hatatian Jewelry · Roho Nyekundu</div>
           <div class="pname">Tembo - Legacy Ring</div>
-          <div class="pstone">Baguette Rubies · 18k Yellow Gold</div>
+          <div class="pstone">Tembo - Legacy Ring · 18k Yellow Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · Made to US/UK/EU sizes</div>
+          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · Made to US/UK/EU sizes</div>
         </div>
         <div class="pacts">
-          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Tembo%20Legacy%20Ring" class="penq">Inquire via Email</a>
-          <button class="pwish" onclick="openM('Tembo - Legacy Ring','Baguette Rubies')">♡</button>
+          <a href="#" class="penq" onclick="openM('Tembo - Legacy Ring','Baguettes Rubies · 18k Yellow Gold');return false">Enquire</a>
+          <button class="pwish">♡</button>
         </div>
       </div>
-
     </div>
   </div>
 
-  <!-- PENDANTS -->
+  <!-- PENDANTS (Original Pendants Preserved) -->
   <div class="col-panel" id="tab-pendants">
     <div class="pgrid">
-
       <div class="pcard rv">
         <div class="pimg">
           <img src="sapphevileye.jpeg" alt="The Evil Eye Pendant">
@@ -624,14 +557,12 @@
           <div class="pname">The Evil Eye Pendant</div>
           <div class="pstone">Teal Sapphire · 18k Yellow Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · $100 Insured Global Courier</div>
         </div>
         <div class="pacts">
-          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20The%20Evil%20Eye%20Pendant" class="penq">Inquire via Email</a>
-          <button class="pwish" onclick="openM('The Evil Eye Pendant','Teal Sapphire')">♡</button>
+          <a href="#" class="penq" onclick="openM('The Evil Eye Pendant','Teal Sapphire · 18k Rose Gold · Evil Eye Motif');return false">Enquire</a>
+          <button class="pwish">♡</button>
         </div>
       </div>
-
       <div class="pcard rv d1">
         <div class="pimg">
           <img src="tsavoritepend.jpeg" alt="The Tsavorite Medallion">
@@ -643,28 +574,25 @@
           <div class="pname">The Tsavorite Medallion</div>
           <div class="pstone">Tsavorite Garnet · 18k Yellow Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
-          <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Craftsmanship: 4–8 weeks · $100 Insured Global Courier</div>
         </div>
         <div class="pacts">
-          <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20The%20Tsavorite%20Medallion" class="penq">Inquire via Email</a>
-          <button class="pwish" onclick="openM('The Tsavorite Medallion','Tsavorite Garnet')">♡</button>
+          <a href="#" class="penq" onclick="openM('The Tsavorite Medallion','Tsavorite Garnet · 18k Yellow Gold · Diamonds');return false">Enquire</a>
+          <button class="pwish">♡</button>
         </div>
       </div>
-
     </div>
   </div>
 
   <!-- LOOSE GEMSTONES -->
   <div class="col-panel" id="tab-gemstones-shop">
     <div style="margin-bottom:24px;background:var(--gp);padding:20px;border-left:3px solid var(--g);">
-      <p style="font-family:var(--body);font-size:1rem;color:var(--im);"><strong>For Travelers & Collectors:</strong> Acquire certified, unenhanced loose gemstones directly to take home to your personal jeweler elsewhere. Includes official origin documentation and $100 USD flat insured global shipping.</p>
+      <p style="font-family:var(--body);font-size:1rem;color:var(--im);"><strong>For Travelers & Collectors:</strong> Acquire certified, unenhanced loose gemstones directly to take home to your personal jeweler. Includes official origin documentation and $100 USD flat insured global shipping.</p>
     </div>
     <div class="pgrid">
-
       <div class="pcard rv">
         <div class="pimg" style="background:#eef6f2;">
           <img src="tsavoritepend.jpeg" alt="Certified Loose Tsavorite Garnet">
-          <div class="pbadge" style="background:var(--gd)">Loose Stone</div>
+          <div class="pbadge" style="background:var(--gd)">Certified Loose</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Certified Loose Tsavorite Garnet','Unenhanced · Taita Taveta Origin')">Enquire</button></div>
         </div>
         <div class="pinfo">
@@ -681,7 +609,7 @@
       <div class="pcard rv d1">
         <div class="pimg" style="background:#f0f4f8;">
           <img src="sapphevileye.jpeg" alt="Certified Loose Teal Sapphire">
-          <div class="pbadge">Loose Stone</div>
+          <div class="pbadge">Certified Loose</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Certified Loose Teal Sapphire','Ethically Mined East African Sapphire')">Enquire</button></div>
         </div>
         <div class="pinfo">
@@ -694,20 +622,17 @@
           <a href="mailto:info@hatatianjewelry.online?subject=Inquiry:%20Loose%20Teal%20Sapphire" class="penq">Acquire Loose Stone</a>
         </div>
       </div>
-
     </div>
   </div>
-
 </section>
 
-<!-- ═══ CHAPTER 03: GEMSTONES ═══ -->
-<div class="chapter" id="gemstones">
+<!-- ═══ CHAPTER 03: GEMSTONES (Original Structure Restored) ═══ -->
+<div class="chapter">
   <span class="chapter-num">03</span>
   <div class="chapter-line"></div>
   <span class="chapter-title">Rare East African Minerals</span>
 </div>
-
-<div class="gems-story">
+<div class="gems-story" id="gemstones">
   <div class="gems-story-top">
     <div>
       <div class="label">Gemstone Consultancy</div>
@@ -751,7 +676,7 @@
   </div>
 </div>
 
-<!-- ═══ ORIGIN STORY ═══ -->
+<!-- ═══ ORIGIN STORY (Original Image aboutus.png Restored) ═══ -->
 <div class="origin">
   <div class="origin-text">
     <div class="label">Ethical Sourcing</div>
@@ -825,8 +750,8 @@
       <div class="atelier-item">
         <div class="atelier-item-icon">★</div>
         <div class="atelier-item-text">
-          <strong>Global Showcases</strong>
-          <span>NYFW Debut · Paris Fashion Week (2027) · New York Gallery (2027)</span>
+          <strong>Global Showcase</strong>
+          <span>Upcoming Runway Debut: New York Fashion Week (2027)</span>
         </div>
       </div>
     </div>
@@ -866,11 +791,11 @@
   </div>
 </section>
 
-<!-- ═══ INSTAGRAM ═══ -->
+<!-- ═══ MEDIA & AUTHORITY (Exact updates for NYFW and NY Gallery) ═══ -->
 <section class="ig">
-  <div class="label" style="justify-content:center;">Instagram</div>
-  <h2 class="h2">@hatatianjewelry</h2>
-  <p>Follow our journey from East African mines to private bespoke commissions.</p>
+  <div class="label" style="justify-content:center;">Institutional Authority &amp; Media</div>
+  <h2 class="h2">As Featured In &amp; <em>Upcoming Debuts</em></h2>
+  <p>Featured on NTV National Television · Published in Nomad Africa Magazine<br>Upcoming Runway Debut: New York Fashion Week (2027)<br>Coming soon: A New York gallery and consignment showcase for limited edition pieces coming in 2027</p>
   <a href="mailto:info@hatatianjewelry.online" class="btn btn-ghost-g">Contact Private Concierge</a>
 </section>
 
@@ -912,10 +837,10 @@
     <div>
       <div class="fct">Global Presence</div>
       <ul class="flinks">
-        <li><a href="#press">Featured on NTV</a></li>
-        <li><a href="#press">Nomad Africa Magazine</a></li>
-        <li><a href="#press">NYFW & Paris Fashion Week</a></li>
-        <li><a href="#press">New York Gallery (2027)</a></li>
+        <li><a href="#">Featured on NTV</a></li>
+        <li><a href="#">Nomad Africa Magazine</a></li>
+        <li><a href="#">New York Fashion Week Debut (2027)</a></li>
+        <li><a href="#">New York Gallery Showcase (2027)</a></li>
       </ul>
     </div>
   </div>
