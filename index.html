@@ -19,9 +19,11 @@
     }
     html{scroll-behavior:smooth}
     body{background:var(--w);color:var(--ink);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none}
+
     /* ─── Cursor ─── */
     #cur{width:6px;height:6px;background:var(--g);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s}
     #cur-r{width:28px;height:28px;border:1px solid var(--g);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all .18s ease;opacity:.35}
+
     /* ─── Nav ─── */
     nav{position:fixed;top:0;left:0;right:0;z-index:300;display:flex;align-items:center;justify-content:space-between;padding:22px 56px;transition:background .45s,padding .4s,box-shadow .4s}
     nav.on{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);padding:14px 56px;box-shadow:0 1px 0 var(--bd)}
@@ -35,6 +37,7 @@
     .ncta{font-size:.65rem!important;font-weight:400!important;letter-spacing:.15em!important;color:var(--w)!important;background:var(--g);padding:10px 22px!important;transition:background .3s!important}
     .ncta:hover{background:var(--gm)!important}
     nav.on .ncta{color:var(--w)!important}
+
     /* ─── Hero — full bleed editorial ─── */
     .hero{position:relative;height:100vh;min-height:700px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
     .hero-left{position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 100px;z-index:2;background:linear-gradient(160deg,var(--gd) 0%,var(--g) 100%)}
@@ -50,6 +53,7 @@
     .hero:hover .hero-right img{transform:scale(1.04)}
     .hero-right::before{content:'';position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,var(--gd),transparent);z-index:1}
     .hero-caption{position:absolute;bottom:32px;right:28px;z-index:2;font-family:var(--body);font-style:italic;font-size:.8rem;color:rgba(255,255,255,.45);letter-spacing:.08em;writing-mode:vertical-rl}
+
     /* ─── Buttons ─── */
     .btn{font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .3s;cursor:none;border:none}
     .btn-solid{color:var(--w);background:var(--g);padding:14px 34px}
@@ -58,12 +62,14 @@
     .btn-ghost-w:hover{border-color:rgba(255,255,255,.75);color:var(--w)}
     .btn-ghost-g{color:var(--g);border:1px solid var(--g);padding:13px 30px}
     .btn-ghost-g:hover{background:var(--g);color:var(--w)}
+
     /* ─── Marquee ─── */
     .mq{background:var(--g);overflow:hidden;padding:12px 0}
     .mq-t{display:flex;animation:mq 35s linear infinite;width:max-content}
     .mq-t span{font-size:.58rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.6);padding:0 36px;white-space:nowrap}
     .mq-t .dot{color:rgba(255,255,255,.3);padding:0 2px;letter-spacing:0}
     @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
     /* ─── Story Section ─── */
     .story{display:grid;grid-template-columns:45% 55%;min-height:80vh}
     .story-img{position:relative;overflow:hidden}
@@ -83,26 +89,30 @@
     .stat+.stat{border-left:1px solid var(--bd);padding-left:20px}
     .stat-n{font-family:var(--serif);font-size:2.8rem;font-weight:400;color:var(--g);line-height:1}
     .stat-l{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--is);margin-top:6px}
+
     /* ─── Chapter Divider ─── */
     .chapter{padding:80px 56px;display:flex;align-items:center;gap:32px;background:var(--gd)}
     .chapter-num{font-family:var(--serif);font-size:8rem;font-weight:400;color:rgba(255,255,255,.06);line-height:1;flex-shrink:0}
     .chapter-line{flex:1;height:1px;background:rgba(255,255,255,.08)}
     .chapter-title{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.4vw,2.4rem);color:rgba(255,255,255,.5);white-space:nowrap}
+
     /* ─── Collections ─── */
     .collections{padding:100px 56px;background:var(--w)}
     .col-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px}
     .col-link{font-size:.63rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--g);text-decoration:none;border-bottom:1px solid var(--g);padding-bottom:2px;transition:opacity .3s}
     .col-link:hover{opacity:.6}
+
     /* Collection Tabs */
     .col-tabs{display:flex;gap:0;margin-bottom:48px;border-bottom:1px solid var(--bd);overflow-x:auto}
     .col-tab{font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--is);padding:12px 28px 14px;cursor:none;border:none;background:transparent;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .3s,border-color .3s;white-space:nowrap}
     .col-tab.active{color:var(--g);border-bottom-color:var(--g)}
     .col-tab:hover{color:var(--g)}
+
     .col-panel{display:none}
     .col-panel.active{display:block}
-    /* Product grid — Expanded structure for dropping multiple pieces */
-    .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 16px}
-    .pgrid.four{grid-template-columns:repeat(4,1fr)}
+
+    /* Product grid — Spacious, expandable layout */
+    .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px 20px}
     .pcard{background:var(--w);cursor:none;position:relative}
     .pimg{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--sg)}
     .pimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .65s cubic-bezier(.25,.46,.45,.94)}
@@ -124,6 +134,7 @@
     .penq:hover{background:var(--gm)}
     .pwish{font-size:.9rem;color:var(--is);background:transparent;border:1px solid var(--bd);padding:12px 14px;cursor:none;transition:border-color .3s,color .3s}
     .pwish:hover{border-color:var(--g);color:var(--g)}
+
     /* ─── Gemstones Story ─── */
     .gems-story{background:var(--gd);padding:0}
     .gems-story-top{padding:100px 56px 60px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -146,6 +157,7 @@
     .gem-dots{display:flex;gap:4px}
     .gem-dots span{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.15)}
     .gem-dots span.on{background:#8de8b8}
+
     /* ─── Origin Story ─── */
     .origin{display:grid;grid-template-columns:55% 45%;min-height:75vh}
     .origin-text{background:var(--g);padding:100px 80px;display:flex;flex-direction:column;justify-content:center}
@@ -157,6 +169,7 @@
     .origin-text .pull-quote{color:#8de8b8;border-color:#8de8b8}
     .origin-img{position:relative;overflow:hidden}
     .origin-img img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.08) saturate(1.1)}
+
     /* ─── Process Timeline ─── */
     .process{padding:100px 56px;background:var(--ow)}
     .process-intro{max-width:520px;margin-bottom:72px}
@@ -168,6 +181,7 @@
     .tl-icon{width:40px;height:2px;background:var(--g);margin-bottom:20px}
     .tl-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--ink);margin-bottom:12px}
     .tl-desc{font-family:var(--body);font-size:.95rem;line-height:1.8;color:var(--im)}
+
     /* ─── Atelier / Location ─── */
     .atelier{display:grid;grid-template-columns:1fr 1fr;gap:0}
     .atelier-map{background:var(--gd);padding:80px 72px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
@@ -192,10 +206,32 @@
     .frow{display:grid;grid-template-columns:1fr 1fr;gap:22px}
     .bsub{font-family:var(--sans);font-size:.65rem;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--w);background:var(--g);border:none;padding:16px 0;cursor:none;width:100%;margin-top:12px;transition:background .3s}
     .bsub:hover{background:var(--gm)}
-    /* ─── Media / Authority Section ─── */
-    .ig{padding:80px 56px;background:var(--sg);text-align:center}
-    .ig .h2{text-align:center;margin:0 auto 12px;font-size:2.4rem}
-    .ig p{font-family:var(--body);font-style:italic;font-size:1.1rem;color:var(--is);margin-bottom:36px;line-height:1.7}
+
+    /* ─── Media, Press & Editorial Gallery (Restored Spacing & Placeholders) ─── */
+    .media-section{padding:100px 56px;background:var(--sg)}
+    .media-header{text-align:center;max-width:700px;margin:0 auto 60px}
+    .media-header .h2{font-size:2.4rem;margin-bottom:18px}
+    .media-header p{font-family:var(--body);font-style:italic;font-size:1.1rem;color:var(--im);line-height:1.7}
+
+    .media-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-bottom:60px}
+    
+    /* Dedicated Video and Photo Upload Containers */
+    .media-card{background:var(--w);border:1px solid var(--bd);position:relative;overflow:hidden;display:flex;flex-direction:column}
+    .media-placeholder-video, .media-placeholder-photo{position:relative;width:100%;aspect-ratio:16/9;background:#e2dec;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .media-placeholder-video video, .media-placeholder-photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .media-badge{position:absolute;top:16px;left:16px;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;background:var(--g);color:var(--w);padding:6px 12px;z-index:2}
+
+    .media-body{padding:28px 32px}
+    .media-tag{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:8px}
+    .media-title{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:10px}
+    .media-desc{font-family:var(--body);font-size:1rem;line-height:1.7;color:var(--im)}
+
+    /* Press List */
+    .press-list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--bd);padding-top:48px}
+    .press-item{padding:20px;background:var(--w);border:1px solid var(--bd)}
+    .press-pub{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:8px}
+    .press-headline{font-family:var(--serif);font-size:1.1rem;color:var(--ink);line-height:1.4}
+
     /* ─── Footer ─── */
     footer{background:var(--ink);padding:80px 56px 0}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.07)}
@@ -212,6 +248,7 @@
     .fbot{padding:22px 0;display:flex;justify-content:space-between;align-items:center}
     .fcopy{font-size:.62rem;color:rgba(255,255,255,.18);letter-spacing:.08em}
     .fstrap{font-family:var(--body);font-style:italic;font-size:.78rem;color:rgba(255,255,255,.16)}
+
     /* ─── Modal ─── */
     .moverlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
     .moverlay.open{opacity:1;pointer-events:all}
@@ -222,14 +259,13 @@
     .mtitle{font-family:var(--serif);font-size:2.1rem;font-weight:400;color:var(--ink);margin-bottom:6px}
     .mstone{font-family:var(--body);font-style:italic;font-size:1rem;color:var(--is);margin-bottom:24px}
     .mnote{font-family:var(--body);font-size:.92rem;line-height:1.75;color:var(--im);margin-bottom:28px;padding:16px 20px;background:var(--gp);border-left:3px solid var(--g)}
+
     /* ─── Reveal ─── */
     .rv{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.16,1,.3,1),transform .75s cubic-bezier(.16,1,.3,1)}
     .rv.in{opacity:1;transform:none}
     .d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
+
     /* ─── Responsive ─── */
-    @media(max-width:1100px){
-      .pgrid.four{grid-template-columns:repeat(3,1fr)}
-    }
     @media(max-width:960px){
       nav{padding:18px 24px}nav.on{padding:14px 24px}
       .nlinks{display:none}
@@ -239,8 +275,8 @@
       .story,.origin,.atelier{grid-template-columns:1fr}
       .story-img,.origin-img{min-height:360px}
       .story-text,.origin-text,.atelier-map,.atelier-form{padding:64px 32px}
-      .collections,.gems-story-top,.process,.ig{padding:72px 24px}
-      .gems-visual,.pgrid,.pgrid.four,.timeline{grid-template-columns:1fr 1fr}
+      .collections,.gems-story-top,.process,.media-section{padding:72px 24px}
+      .gems-visual,.pgrid,.timeline,.media-grid,.press-list{grid-template-columns:1fr}
       .chapter{padding:60px 24px}
       .col-header{flex-direction:column;align-items:flex-start;gap:14px}
       footer{padding:60px 24px 0}
@@ -251,7 +287,6 @@
       .gems-story-top{grid-template-columns:1fr;gap:36px}
     }
     @media(max-width:580px){
-      .gems-visual,.pgrid,.pgrid.four,.timeline{grid-template-columns:1fr}
       .footer-grid{grid-template-columns:1fr}
       .stats{flex-direction:column;gap:20px}
       .stat+.stat{border-left:none;border-top:1px solid var(--bd);padding-left:0;padding-top:20px}
@@ -259,9 +294,11 @@
   </style>
 </head>
 <body>
+
 <!-- CURSOR -->
 <div id="cur"></div>
 <div id="cur-r"></div>
+
 <!-- MODAL -->
 <div class="moverlay" id="modal">
   <div class="modal">
@@ -277,6 +314,7 @@
     <button class="bsub" id="msub">Send Enquiry</button>
   </div>
 </div>
+
 <!-- NAV -->
 <nav id="nav">
   <a href="#" class="nlogo">
@@ -291,6 +329,7 @@
     <li><a href="#atelier" class="ncta">Book Consultation</a></li>
   </ul>
 </nav>
+
 <!-- ═══ HERO ═══ -->
 <section class="hero">
   <div class="hero-left">
@@ -307,6 +346,7 @@
     <div class="hero-caption">Mombasa, Kenya</div>
   </div>
 </section>
+
 <!-- MARQUEE -->
 <div class="mq">
   <div class="mq-t">
@@ -314,12 +354,14 @@
     <span>Tsavorite Garnet</span><span class="dot">◆</span><span>Teal Sapphire</span><span class="dot">◆</span><span>Dragon Garnet</span><span class="dot">◆</span><span>Aquamarine</span><span class="dot">◆</span><span>Spinel</span><span class="dot">◆</span><span>Handcrafted in Kenya</span><span class="dot">◆</span><span>Ethically Sourced</span><span class="dot">◆</span><span>Bespoke Commissions</span><span class="dot">◆</span><span>By Appointment · Private Jeweler</span><span class="dot">◆</span><span>Hatatian Gems</span><span class="dot">◆</span>
   </div>
 </div>
+
 <!-- ═══ CHAPTER 01: THE STORY ═══ -->
 <div class="chapter">
   <span class="chapter-num">01</span>
   <div class="chapter-line"></div>
   <span class="chapter-title">The Origin Story</span>
 </div>
+
 <div class="story" id="story">
   <div class="story-img">
     <img src="aboutus.png" alt="Hatatian pendant">
@@ -339,12 +381,14 @@
     </div>
   </div>
 </div>
+
 <!-- ═══ CHAPTER 02: COLLECTIONS ═══ -->
 <div class="chapter">
   <span class="chapter-num">02</span>
   <div class="chapter-line"></div>
   <span class="chapter-title">The Collections</span>
 </div>
+
 <section class="collections" id="collections">
   <div class="col-header">
     <div>
@@ -353,6 +397,7 @@
     </div>
     <a href="#atelier" class="col-link rv">Commission a Bespoke Piece →</a>
   </div>
+
   <!-- Tabs -->
   <div class="col-tabs">
     <button class="col-tab active" data-tab="green-garnet">Green Garnet Collection</button>
@@ -361,7 +406,7 @@
     <button class="col-tab" data-tab="gemstones-shop">Loose Gemstones</button>
   </div>
 
-  <!-- GREEN GARNET COLLECTION (Dedicated tab with expanded placeholders for dropping many pieces) -->
+  <!-- GREEN GARNET COLLECTION -->
   <div class="col-panel active" id="tab-green-garnet">
     <div style="margin-bottom:32px;max-width:720px;">
       <p class="prose" style="font-size:1.05rem;color:var(--im);">Mined along the geological belt of Taita Taveta, Kenya, the Tsavorite garnet is over two hundred times rarer than emerald. Naturally unenhanced and vibrant, our Green Garnet Collection honors mine-to-market traceability from local East African miners directly to your hands.</p>
@@ -424,7 +469,6 @@
         </div>
       </div>
 
-      <!-- Additional placeholders for more Green Garnet pieces -->
       <div class="pcard rv d3">
         <div class="pimg" style="background:#eef6f2;">
           <img src="tsavoritepend.jpeg" alt="Taita Taveta Green Garnet Pendant">
@@ -472,7 +516,7 @@
         <div class="pinfo">
           <div class="pcol">Hatatian Jewelry · Green Garnet Collection</div>
           <div class="pname">Tsavorite Accent Eternity Band</div>
-          <div class="pstone">Alternating Tsavorites & Diamonds · 18k Gold</div>
+          <div class="pstone">Alternating Tsavorites &amp; Diamonds · 18k Gold</div>
           <div class="pprice">Bespoke commission · <span>Price on enquiry</span></div>
           <div style="font-size:.6rem;color:var(--is);margin-top:4px;">Lead time: 4–8 weeks · $100 Insured Global Courier</div>
         </div>
@@ -484,7 +528,7 @@
     </div>
   </div>
 
-  <!-- RINGS (Original Rings Preserved) -->
+  <!-- RINGS -->
   <div class="col-panel" id="tab-rings">
     <div class="pgrid">
       <div class="pcard rv">
@@ -505,6 +549,7 @@
           <button class="pwish">♡</button>
         </div>
       </div>
+
       <div class="pcard rv d1">
         <div class="pimg" style="background:#e8f2ee">
           <img src="catctus.jpg" alt="A Touch of Heaven Ring">
@@ -523,6 +568,7 @@
           <button class="pwish">♡</button>
         </div>
       </div>
+
       <div class="pcard rv d2">
         <div class="pimg" style="background:#f5f0e8">
           <img src="rubyring.jpeg" alt="Tembo - Legacy Ring">
@@ -543,7 +589,7 @@
     </div>
   </div>
 
-  <!-- PENDANTS (Original Pendants Preserved) -->
+  <!-- PENDANTS -->
   <div class="col-panel" id="tab-pendants">
     <div class="pgrid">
       <div class="pcard rv">
@@ -563,6 +609,7 @@
           <button class="pwish">♡</button>
         </div>
       </div>
+
       <div class="pcard rv d1">
         <div class="pimg">
           <img src="tsavoritepend.jpeg" alt="The Tsavorite Medallion">
@@ -586,7 +633,7 @@
   <!-- LOOSE GEMSTONES -->
   <div class="col-panel" id="tab-gemstones-shop">
     <div style="margin-bottom:24px;background:var(--gp);padding:20px;border-left:3px solid var(--g);">
-      <p style="font-family:var(--body);font-size:1rem;color:var(--im);"><strong>For Travelers & Collectors:</strong> Acquire certified, unenhanced loose gemstones directly to take home to your personal jeweler. Includes official origin documentation and $100 USD flat insured global shipping.</p>
+      <p style="font-family:var(--body);font-size:1rem;color:var(--im);"><strong>For Travelers &amp; Collectors:</strong> Acquire certified, unenhanced loose gemstones directly to take home to your personal jeweler. Includes official origin documentation and $100 USD flat insured global shipping.</p>
     </div>
     <div class="pgrid">
       <div class="pcard rv">
@@ -626,12 +673,13 @@
   </div>
 </section>
 
-<!-- ═══ CHAPTER 03: GEMSTONES (Original Structure Restored) ═══ -->
+<!-- ═══ CHAPTER 03: GEMSTONES ═══ -->
 <div class="chapter">
   <span class="chapter-num">03</span>
   <div class="chapter-line"></div>
   <span class="chapter-title">Rare East African Minerals</span>
 </div>
+
 <div class="gems-story" id="gemstones">
   <div class="gems-story-top">
     <div>
@@ -655,8 +703,8 @@
     </div>
 
     <div class="gem-card">
-      <div class="gem-name">Teal & Yellow Sapphire</div>
-      <div class="gem-origin">Garba Tula & East Africa</div>
+      <div class="gem-name">Teal &amp; Yellow Sapphire</div>
+      <div class="gem-origin">Garba Tula &amp; East Africa</div>
       <div class="gem-desc">Captivating bi-color sapphires shifting from deep oceanic blue to tropical teal green and sunlit yellow.</div>
       <div class="gem-rarity">
         <span class="gem-rarity-label">Rarity: Ultra Rare</span>
@@ -665,7 +713,7 @@
     </div>
 
     <div class="gem-card">
-      <div class="gem-name">Mahenge Spinel & Aquamarine</div>
+      <div class="gem-name">Mahenge Spinel &amp; Aquamarine</div>
       <div class="gem-origin">East African Rift Valley</div>
       <div class="gem-desc">Vivid neon pink spinels and crystalline sea-blue aquamarines cut to maximize natural dispersion and light.</div>
       <div class="gem-rarity">
@@ -676,7 +724,7 @@
   </div>
 </div>
 
-<!-- ═══ ORIGIN STORY (Original Image aboutus.png Restored) ═══ -->
+<!-- ═══ ORIGIN STORY ═══ -->
 <div class="origin">
   <div class="origin-text">
     <div class="label">Ethical Sourcing</div>
@@ -707,7 +755,7 @@
     <div class="tl-step">
       <div class="tl-num">02</div>
       <div class="tl-icon"></div>
-      <div class="tl-title">3D CAD & Render</div>
+      <div class="tl-title">3D CAD &amp; Render</div>
       <div class="tl-desc">We generate bespoke 3D renders and technical proportions for your approval prior to metal casting.</div>
     </div>
     <div class="tl-step">
@@ -737,7 +785,7 @@
         <div class="atelier-item-icon">✦</div>
         <div class="atelier-item-text">
           <strong>Consultations</strong>
-          <span>Virtual Video Appointments Worldwide & By Appointment</span>
+          <span>Virtual Video Appointments Worldwide &amp; By Appointment</span>
         </div>
       </div>
       <div class="atelier-item">
@@ -750,7 +798,7 @@
       <div class="atelier-item">
         <div class="atelier-item-icon">★</div>
         <div class="atelier-item-text">
-          <strong>Global Showcase</strong>
+          <strong>Global Presence</strong>
           <span>Upcoming Runway Debut: New York Fashion Week (2027)</span>
         </div>
       </div>
@@ -791,12 +839,68 @@
   </div>
 </section>
 
-<!-- ═══ MEDIA & AUTHORITY (Exact updates for NYFW and NY Gallery) ═══ -->
-<section class="ig">
-  <div class="label" style="justify-content:center;">Institutional Authority &amp; Media</div>
-  <h2 class="h2">As Featured In &amp; <em>Upcoming Debuts</em></h2>
-  <p>Featured on NTV National Television · Published in Nomad Africa Magazine<br>Upcoming Runway Debut: New York Fashion Week (2027)<br>Coming soon: A New York gallery and consignment showcase for limited edition pieces coming in 2027</p>
-  <a href="mailto:info@hatatianjewelry.online" class="btn btn-ghost-g">Contact Private Concierge</a>
+<!-- ═══ MEDIA, PRESS & EDITORIAL GALLERY (Structured Layout & Placeholders) ═══ -->
+<section class="media-section" id="media">
+  <div class="media-header">
+    <div class="label" style="justify-content:center;">Institutional Authority &amp; Media</div>
+    <h2 class="h2">As Featured In &amp; <em>Global Footprint</em></h2>
+    <p>Documenting our journey across national television, premier African print publications, international fashion weeks, and physical retail spaces.</p>
+  </div>
+
+  <!-- Video & Photo Upload Slots -->
+  <div class="media-grid">
+    <!-- Video Upload Container -->
+    <div class="media-card">
+      <div class="media-placeholder-video">
+        <span class="media-badge">Video Coverage</span>
+        <!-- Replace video below with your mp4 file path (e.g. src="ntv_interview.mp4") -->
+        <video controls poster="aboutus.png">
+          <source src="ntv_broadcast.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+      <div class="media-body">
+        <div class="media-tag">NTV National Television</div>
+        <h3 class="media-title">Broadcast Special: Ethics in East African Gemstones</h3>
+        <p class="media-desc">Watch our feature on NTV discussing artisanal mining integrity in Taita Taveta and the rise of fine Kenyan jewelry on the global stage.</p>
+      </div>
+    </div>
+
+    <!-- Editorial Photo Upload Container -->
+    <div class="media-card">
+      <div class="media-placeholder-photo">
+        <span class="media-badge">Print Editorial</span>
+        <!-- Replace src with your scan or photo upload -->
+        <img src="aboutus.png" alt="Nomad Africa Editorial Spread">
+      </div>
+      <div class="media-body">
+        <div class="media-tag">Nomad Magazine (Kenya) &amp; Nomad Africa Magazine (South Africa)</div>
+        <h3 class="media-title">Full-Page &amp; Advertorial Feature Spreads</h3>
+        <p class="media-desc">Exploring the beauty of unenhanced Tsavorite garnets and high-jewelry craftsmanship across East and Southern Africa's premier lifestyle publications.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Press & Runway Row -->
+  <div class="press-list">
+    <div class="press-item">
+      <div class="press-pub">Nomad Magazine · Kenya</div>
+      <div class="press-headline">"Stewards of Ethics: The Rise of Hatatian Jewelry in East Africa"</div>
+    </div>
+    <div class="press-item">
+      <div class="press-pub">Nomad Africa Magazine · South Africa</div>
+      <div class="press-headline">"Pan-African Luxury: High-Traceability Mining from Taita Taveta"</div>
+    </div>
+    <div class="press-item">
+      <div class="press-pub">New York Runway · 2027</div>
+      <div class="press-headline">Upcoming High-Jewelry Debut at New York Fashion Week (2027)</div>
+    </div>
+    <div class="press-item" style="grid-column: span 3;">
+      <div class="press-pub">New York Permanent Retail Partnership · 2027</div>
+      <div class="press-headline">Permanent Multi-Designer Concept Store &amp; Showroom Partnership (New York, 2027)</div>
+      <p style="font-family:var(--body);font-size:.95rem;color:var(--im);margin-top:8px;">Clients will be able to shop physical Hatatian collections year-round alongside select luxury international designers.</p>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ FOOTER ═══ -->
@@ -818,8 +922,8 @@
       <div class="fct">Collections</div>
       <ul class="flinks">
         <li><a href="#collections">Green Garnet Collection</a></li>
-        <li><a href="#collections">Rings & Solitaires</a></li>
-        <li><a href="#collections">Pendants & Necklaces</a></li>
+        <li><a href="#collections">Rings &amp; Solitaires</a></li>
+        <li><a href="#collections">Pendants &amp; Necklaces</a></li>
         <li><a href="#gemstones">Certified Loose Gems</a></li>
       </ul>
     </div>
@@ -837,10 +941,10 @@
     <div>
       <div class="fct">Global Presence</div>
       <ul class="flinks">
-        <li><a href="#">Featured on NTV</a></li>
-        <li><a href="#">Nomad Africa Magazine</a></li>
-        <li><a href="#">New York Fashion Week Debut (2027)</a></li>
-        <li><a href="#">New York Gallery Showcase (2027)</a></li>
+        <li><a href="#media">NTV National Television</a></li>
+        <li><a href="#media">Nomad Magazine (KE &amp; SA)</a></li>
+        <li><a href="#media">New York Fashion Week Debut (2027)</a></li>
+        <li><a href="#media">New York Multi-Designer Store (2027)</a></li>
       </ul>
     </div>
   </div>
