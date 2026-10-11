@@ -723,7 +723,7 @@
       .col-page-hero>div:last-child{min-height:52vw}
     }
     /* Hide placeholder once a real image is loaded */
-    .col-page-hero img:not([src="dianeckmain.jpg"])[src]~#col-hero-ph{display:none}
+    .col-page-hero img:([src="dianeckmain.jpg"])[src]~#col-hero-ph{display:none}
   </style>
 
   <div class="mq">
