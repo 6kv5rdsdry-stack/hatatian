@@ -64,8 +64,6 @@
     .btn-solid:hover{background:var(--gm);transform:translateY(-2px)}
     .btn-ghost-w{color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3);padding:13px 30px}
     .btn-ghost-w:hover{border-color:rgba(255,255,255,.75);color:var(--w)}
-    .btn-ghost-g{color:var(--g);border:1px solid var(--g);padding:13px 30px}
-    .btn-ghost-g:hover{background:var(--g);color:var(--w)}
 
     /* MARQUEE */
     .mq{background:var(--g);overflow:hidden;padding:12px 0}
@@ -123,7 +121,7 @@
     .ci-body{font-family:var(--body);font-size:.95rem;line-height:1.75;color:var(--im)}
 
     /* PRODUCT GRID */
-    .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+    .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;row-gap:40px}
     .pgrid.four{grid-template-columns:repeat(4,1fr)}
     .pcard{background:var(--w);cursor:none;position:relative}
     .pimg{position:relative;overflow:hidden;aspect-ratio:3/4;background:var(--sg)}
@@ -140,8 +138,7 @@
     .pcol{font-size:.55rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--g);margin-bottom:6px}
     .pname{font-family:var(--serif);font-size:1.15rem;font-weight:400;color:var(--ink);margin-bottom:5px}
     .pstone{font-family:var(--body);font-style:italic;font-size:.88rem;color:var(--is)}
-    .pprice{font-size:.72rem;font-weight:400;letter-spacing:.1em;color:var(--im);margin-top:8px}
-    .pprice span{color:var(--g);font-weight:500}
+    .pprice{font-size:.75rem;font-weight:500;letter-spacing:.08em;color:var(--g);margin-top:8px}
     .pacts{display:flex;gap:8px;margin-top:12px}
     .penq{flex:1;font-size:.6rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--w);background:var(--g);border:none;padding:12px 14px;cursor:none;transition:background .3s;text-align:center;text-decoration:none;display:block}
     .penq:hover{background:var(--gm)}
@@ -343,7 +340,7 @@
 
     /* RESPONSIVE */
     @media(max-width:1100px){
-      .pgrid.four{grid-template-columns:repeat(3,1fr)}
+      .pgrid,.pgrid.four{grid-template-columns:repeat(3,1fr)}
       .assurance-grid,.atelier-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:960px){
@@ -413,6 +410,7 @@
   </a>
   <ul class="nlinks">
     <li><a href="#collections">Collections</a></li>
+    <li><a href="#green-garnet">Tsavo Green</a></li>
     <li><a href="#gemstones">Gemstones</a></li>
     <li><a href="#story">Our Story</a></li>
     <li><a href="#media">Press</a></li>
@@ -506,8 +504,8 @@
   <div class="col-tabs">
     <button class="col-tab active" data-tab="rings">Rings</button>
     <button class="col-tab" data-tab="pendants">Pendants & Necklaces</button>
-    <button class="col-tab" data-tab="earrings">Earrings</button>
-    <button class="col-tab" data-tab="bracelets">Bracelets</button>
+    <button class="col-tab" data-tab="earrings">Earrings & Studs</button>
+    <button class="col-tab" data-tab="bracelets">Bracelets & Bangles</button>
     <button class="col-tab" data-tab="gemstones-shop">Certified Loose Gems</button>
   </div>
 
@@ -517,7 +515,7 @@
       <div class="ci-icon">💍</div>
       <div>
         <div class="ci-title">The Covenant Collection — Rings</div>
-        <div class="ci-body">Inspired by the ancient vows spoken under Kenya's open sky — each ring is designed to carry the weight of a promise without sacrificing lightness of form. Handcrafted in 18k yellow, white, and rose gold in Kenya, pairing rare African gemstones with settings that honor the stone's natural character.</div>
+        <div class="ci-body">Inspired by ancient vows spoken under Kenya's open sky — each ring is designed to carry the weight of a promise without sacrificing lightness of form. Handcrafted in 18k yellow, white, and rose gold in Kenya, pairing rare African gemstones and diamonds with custom architectural settings.</div>
       </div>
     </div>
     <div class="pgrid">
@@ -527,7 +525,7 @@
           <div class="pbadge">Engagement</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Celestial Sapphire Solitaire','Brilliant-cut Sapphire · 18k Rose Gold')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">The Covenant</div><div class="pname">Celestial Sapphire Solitaire</div><div class="pstone">Brilliant-cut Sapphire · 18k Rose Gold</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">The Covenant</div><div class="pname">Celestial Sapphire Solitaire</div><div class="pstone">Brilliant-cut Sapphire · 18k Rose Gold</div><div class="pprice">From $3,800</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('Celestial Sapphire Solitaire','Brilliant-cut Sapphire · 18k Rose Gold');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
@@ -536,7 +534,7 @@
           <div class="pbadge gold">New</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('A Touch of Heaven','Lavender Sapphires · Half Eternity 18k Yellow Gold')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">The Eternal</div><div class="pname">A Touch of Heaven</div><div class="pstone">Lavender Sapphires · Half Eternity 18k Yellow Gold</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">The Eternal</div><div class="pname">A Touch of Heaven</div><div class="pstone">Lavender Sapphires · Half Eternity 18k Yellow Gold</div><div class="pprice">From $2,900</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('A Touch of Heaven','Lavender Sapphires · Half Eternity 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
@@ -544,39 +542,43 @@
         <div class="pimg"><img src="rubyring.jpeg" alt="Tembo Legacy Ring">
           <div class="poverlay"><button class="pobtn" onclick="openM('Tembo — Legacy Ring','Baguette Rubies · 18k Yellow Gold')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Roho Nyekundu</div><div class="pname">Tembo — Legacy Ring</div><div class="pstone">Baguette Rubies · 18k Yellow Gold</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Roho Nyekundu</div><div class="pname">Tembo — Legacy Ring</div><div class="pstone">Baguette Rubies · 18k Yellow Gold</div><div class="pprice">From $5,200</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('Tembo — Legacy Ring','Baguette Rubies · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
       <div class="pcard rv">
         <div class="pimg">
-          <img src="YOUR_PHOTO_HERE.jpg" alt="Add Product">
-          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add your ring photo here</span></div>
-          <div class="poverlay"><button class="pobtn" onclick="openM('Ring Name','Stone · Metal')">Enquire</button></div>
+          <img src="YOUR_PHOTO_HERE.jpg" alt="Diamond Emerald Cut Ring">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Diamond Solitaire Ring</span></div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Emerald-Cut Diamond Solitaire','18k Yellow Gold Cathedral Setting')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Collection Name</div><div class="pname">Ring Name</div><div class="pstone">Stone · Metal</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
-        <div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Stone · Metal');return false">Enquire</a><button class="pwish">♡</button></div>
+        <div class="pinfo"><div class="pcol">High Jewelry</div><div class="pname">Emerald-Cut Diamond Solitaire</div><div class="pstone">1.2ct Diamond · 18k Yellow Gold</div><div class="pprice">From $8,500</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Emerald-Cut Diamond Solitaire','18k Yellow Gold Cathedral Setting');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
       <div class="pcard rv d1">
         <div class="pimg">
-          <img src="YOUR_PHOTO_HERE.jpg" alt="Add Product">
-          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add your ring photo here</span></div>
-          <div class="poverlay"><button class="pobtn" onclick="openM('Ring Name','Stone · Metal')">Enquire</button></div>
+          <img src="YOUR_PHOTO_HERE.jpg" alt="Teal Sapphire Compass Ring">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Teal Sapphire Ring</span></div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Garbatula Compass Ring','Garbatula Teal Sapphire · 18k Yellow Gold')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Collection Name</div><div class="pname">Ring Name</div><div class="pstone">Stone · Metal</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
-        <div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Stone · Metal');return false">Enquire</a><button class="pwish">♡</button></div>
+        <div class="pinfo"><div class="pcol">Rare Earth</div><div class="pname">Garbatula Compass Ring</div><div class="pstone">Teal Sapphire · Compass Prongs · 18k Gold</div><div class="pprice">From $4,100</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Garbatula Compass Ring','Garbatula Teal Sapphire · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
       <div class="pcard rv d2">
         <div class="pimg">
-          <img src="YOUR_PHOTO_HERE.jpg" alt="Add Product">
-          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add your ring photo here</span></div>
-          <div class="poverlay"><button class="pobtn" onclick="openM('Ring Name','Stone · Metal')">Enquire</button></div>
+          <img src="YOUR_PHOTO_HERE.jpg" alt="Spinel Signet Ring">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Blue Spinel Signet</span></div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Blue Spinel Atelier Signet','Cobalt Blue Spinel · Heavy 18k Yellow Gold')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Collection Name</div><div class="pname">Ring Name</div><div class="pstone">Stone · Metal</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
-        <div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Stone · Metal');return false">Enquire</a><button class="pwish">♡</button></div>
+        <div class="pinfo"><div class="pcol">Signet Collection</div><div class="pname">Blue Spinel Atelier Signet</div><div class="pstone">Natural Spinel · Solid 18k Gold</div><div class="pprice">From $3,600</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Blue Spinel Atelier Signet','Cobalt Blue Spinel · Heavy 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
+
+      <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Toi et Moi Ring</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Tsavorite & Diamond Toi et Moi','Unenhanced Tsavorite · Diamond · 18k White Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">High Jewelry</div><div class="pname">Tsavorite & Diamond Toi et Moi</div><div class="pstone">Tsavorite Garnet · Diamond · 18k White Gold</div><div class="pprice">From $6,800</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Tsavorite & Diamond Toi et Moi','Unenhanced Tsavorite · Diamond · 18k White Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+      <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Aquamarine East-West Ring</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Kenyan Aquamarine East-West','Step-Cut Aquamarine · 18k Yellow Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">The Eternal</div><div class="pname">Kenyan Aquamarine East-West</div><div class="pstone">Step-Cut Aquamarine · 18k Yellow Gold</div><div class="pprice">From $3,100</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Kenyan Aquamarine East-West','Step-Cut Aquamarine · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+      <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Dragon Garnet Halo Ring</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Dragon Garnet Halo Ring','Color-change Garnet · Diamond Halo · 18k Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Rare Earth</div><div class="pname">Dragon Garnet Halo Ring</div><div class="pstone">Color-Change Garnet · Diamond Halo</div><div class="pprice">From $5,900</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Dragon Garnet Halo Ring','Color-change Garnet · Diamond Halo · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
 
     </div>
   </div>
@@ -587,7 +589,7 @@
       <div class="ci-icon">🌿</div>
       <div>
         <div class="ci-title">Rare Earth & The Keepsake — Pendants & Necklaces</div>
-        <div class="ci-body">Inspired by the symbols and motifs of East Africa — protective eyes, leaves, drops of water — our pendants are designed to be worn close to the skin and carried through life. Handcrafted in Kenya, each stone is chosen for its unique character.</div>
+        <div class="ci-body">Inspired by the symbols and motifs of East Africa — protective eyes, drops of water, and organic leaves — our pendants are designed to be worn close to the skin. Handcrafted in Kenya, each stone is chosen for its unique character.</div>
       </div>
     </div>
     <div class="pgrid">
@@ -597,7 +599,7 @@
           <div class="pbadge">Rare Earth</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('The Evil Eye Pendant','Teal Sapphire · 18k Yellow Gold · Evil Eye Motif')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Rare Earth</div><div class="pname">The Evil Eye Pendant</div><div class="pstone">Teal Sapphire · 18k Yellow Gold</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Rare Earth</div><div class="pname">The Evil Eye Pendant</div><div class="pstone">Teal Sapphire · 18k Yellow Gold</div><div class="pprice">From $2,400</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('The Evil Eye Pendant','Teal Sapphire · 18k Yellow Gold · Evil Eye Motif');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
@@ -606,7 +608,7 @@
           <div class="pbadge intl">Bestseller</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('The Tsavorite Medallion','Tsavorite Garnet · 18k Yellow Gold · Diamonds')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">The Keepsake</div><div class="pname">The Tsavorite Medallion</div><div class="pstone">Tsavorite Garnet · 18k Yellow Gold</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">The Keepsake</div><div class="pname">The Tsavorite Medallion</div><div class="pstone">Tsavorite Garnet · 18k Yellow Gold</div><div class="pprice">From $4,200</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('The Tsavorite Medallion','Tsavorite Garnet · 18k Yellow Gold · Diamonds');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
 
@@ -614,38 +616,104 @@
         <div class="pimg"><img src="manneck.jpeg" alt="The Verdant Sentinel">
           <div class="poverlay"><button class="pobtn" onclick="openM('The Verdant Sentinel','Tsavorite · 18k Yellow Gold Bezel')">Enquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Male Necklace</div><div class="pname">The Verdant Sentinel</div><div class="pstone">Tsavorite · 18k Yellow Gold Bezel</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Male Necklace</div><div class="pname">The Verdant Sentinel</div><div class="pstone">Tsavorite · 18k Yellow Gold Bezel</div><div class="pprice">From $3,100</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('The Verdant Sentinel','Tsavorite · 18k Yellow Gold Bezel');return false">Enquire</a><button class="pwish">♡</button></div>
       </div>
+
+      <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Diamond Solitaire Pendant</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Classic Diamond Solitaire Pendant','Round Brilliant Diamond · 18k Gold Chain')">Enquire</button></div></div><div class="pinfo"><div class="pcol">High Jewelry</div><div class="pname">Classic Diamond Solitaire Pendant</div><div class="pstone">Diamond · 18k Yellow Gold</div><div class="pprice">From $3,900</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Classic Diamond Solitaire Pendant','Round Brilliant Diamond · 18k Gold Chain');return false">Enquire</a><button class="pwish">♡</button></div></div>
+      <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Teal Sapphire Choker</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Oceanic Teal Sapphire Choker','Garbatula Sapphires · 18k Gold Link')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Rare Earth</div><div class="pname">Oceanic Teal Sapphire Choker</div><div class="pstone">Graduated Teal Sapphires · 18k Gold</div><div class="pprice">From $6,500</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Oceanic Teal Sapphire Choker','Garbatula Sapphires · 18k Gold Link');return false">Enquire</a><button class="pwish">♡</button></div></div>
+      <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Golden Beryl Drop Pendant</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Golden Sun Drop Pendant','Golden Beryl · 18k Yellow Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">The Keepsake</div><div class="pname">Golden Sun Drop Pendant</div><div class="pstone">Natural Golden Beryl · 18k Gold</div><div class="pprice">From $2,800</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Golden Sun Drop Pendant','Golden Beryl · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
 
     </div>
   </div>
 
-  <!-- ── EARRINGS ── -->
+  <!-- ── EARRINGS & STUDS ── -->
   <div class="col-panel" id="tab-earrings">
     <div class="col-inspiration">
       <div class="ci-icon">✨</div>
       <div>
-        <div class="ci-title">Movement & Light — Earrings</div>
-        <div class="ci-body">Earrings frame the face and move with conversation. Handcrafted in Kenya, our earring designs are built around motion: how a stone catches light, how it draws the eye, and how gold harmonizes with rare African gemstones.</div>
+        <div class="ci-title">Movement & Light — Earrings & Studs</div>
+        <div class="ci-body">From daily fine diamond studs to dramatic drop earrings that frame the face. Handcrafted in Kenya, our earring collection balances weightlessness, brilliant stones, and architectural gold settings.</div>
       </div>
     </div>
     <div class="pgrid">
-      <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add earring photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Earring Name','Stone · Metal')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection Name</div><div class="pname">Earring Name</div><div class="pstone">Stone · Metal</div><div class="pprice">Bespoke · <span>Price on enquiry</span></div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Earring Name','Stone · Metal');return false">Enquire</a><button class="pwish">♡</button></div></div>
+
+      <div class="pcard rv">
+        <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Diamond Stud Earrings">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Diamond Studs</span></div>
+          <div class="pbadge">Essential</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Classic Diamond Studs','Round Brilliant Diamonds · 18k Gold Bezel')">Enquire</button></div>
+        </div>
+        <div class="pinfo"><div class="pcol">Atelier Essentials</div><div class="pname">Classic Diamond Studs</div><div class="pstone">Round Brilliant Diamonds · 18k Bezel</div><div class="pprice">From $2,100</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Classic Diamond Studs','Round Brilliant Diamonds · 18k Gold Bezel');return false">Enquire</a><button class="pwish">♡</button></div>
+      </div>
+
+      <div class="pcard rv d1">
+        <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Tsavorite Drop Earrings">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite Drop Earrings</span></div>
+          <div class="pbadge intl">Signature</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Verdant Canopy Drop Earrings','Tsavorite Garnets · Diamonds · 18k Yellow Gold')">Enquire</button></div>
+        </div>
+        <div class="pinfo"><div class="pcol">Tsavo Green</div><div class="pname">Verdant Canopy Drops</div><div class="pstone">Tsavorite Garnets · Diamonds · 18k Gold</div><div class="pprice">From $5,400</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Verdant Canopy Drop Earrings','Tsavorite Garnets · Diamonds · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div>
+      </div>
+
+      <div class="pcard rv d2">
+        <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Teal Sapphire Studs">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Teal Sapphire Studs</span></div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Garbatula Teal Sapphire Studs','Unenhanced Teal Sapphires · 18k Gold')">Enquire</button></div>
+        </div>
+        <div class="pinfo"><div class="pcol">Rare Earth</div><div class="pname">Garbatula Teal Sapphire Studs</div><div class="pstone">Teal Sapphires · Solid 18k Gold</div><div class="pprice">From $1,950</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Garbatula Teal Sapphire Studs','Unenhanced Teal Sapphires · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div>
+      </div>
+
+      <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Diamond Huggie Hoops</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Pavé Diamond Huggie Hoops','Brilliant Diamonds · 18k Yellow Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Atelier Essentials</div><div class="pname">Pavé Diamond Huggie Hoops</div><div class="pstone">Pavé Diamonds · 18k Yellow Gold</div><div class="pprice">From $2,800</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Pavé Diamond Huggie Hoops','Brilliant Diamonds · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+      <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Spinel Statement Drops</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Cobalt Spinel Statement Drops','Tanzanian Spinels · 18k Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">High Jewelry</div><div class="pname">Cobalt Spinel Statement Drops</div><div class="pstone">Blue Spinels · 18k Gold</div><div class="pprice">From $6,200</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Cobalt Spinel Statement Drops','Tanzanian Spinels · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+      <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Pearl & Diamond Ear Cuffs</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Baroque Pearl & Diamond Cuffs','South Sea Pearl · Diamond · 18k Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">The Keepsake</div><div class="pname">Baroque Pearl & Diamond Cuffs</div><div class="pstone">South Sea Pearl · Diamond · 18k Gold</div><div class="pprice">From $3,100</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Baroque Pearl & Diamond Cuffs','South Sea Pearl · Diamond · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+
     </div>
   </div>
 
-  <!-- ── BRACELETS ── -->
+  <!-- ── BRACELETS & BANGLES ── -->
   <div class="col-panel" id="tab-bracelets">
     <div class="col-inspiration">
       <div class="ci-icon">⌚</div>
       <div>
         <div class="ci-title">The Continuity Collection — Bracelets & Bangles</div>
-        <div class="ci-body">Designed to live on the wrist through every season of life. Handcrafted in 18k gold in Kenya, with rare African stones set to catch light at every angle of movement.</div>
+        <div class="ci-body">Designed to live on the wrist through every chapter of life. Handcrafted in 18k gold in Kenya, pairing diamond tennis lines, gold cuffs, and rare African gemstones.</div>
       </div>
     </div>
     <div class="pgrid">
-      <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add bracelet photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Bracelet Name','Stone · Metal')">Enquire</button></div></div><div class="pinfo"><div class="pcol">The Continuity</div><div class="pname">Bracelet Name</div><div class="pstone">Stone · Metal</div><div class="pprice">Bespoke · <span>Price on enquiry</span></div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Bracelet Name','Stone · Metal');return false">Enquire</a><button class="pwish">♡</button></div></div>
+
+      <div class="pcard rv">
+        <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Diamond Tennis Bracelet">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Diamond Tennis Bracelet</span></div>
+          <div class="pbadge gold">Classic</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Classic Diamond Tennis Bracelet','Brilliant Diamonds · 18k Gold')">Enquire</button></div>
+        </div>
+        <div class="pinfo"><div class="pcol">The Continuity</div><div class="pname">Classic Diamond Tennis Bracelet</div><div class="pstone">Brilliant Diamonds · 18k Yellow Gold</div><div class="pprice">From $7,500</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Classic Diamond Tennis Bracelet','Brilliant Diamonds · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div>
+      </div>
+
+      <div class="pcard rv d1">
+        <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Tsavorite Tennis Bracelet">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite Tennis Bracelet</span></div>
+          <div class="pbadge">Signature</div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Tsavorite Emerald-Cut Tennis Line','Taita Taveta Tsavorites · 18k Gold')">Enquire</button></div>
+        </div>
+        <div class="pinfo"><div class="pcol">Tsavo Green</div><div class="pname">Tsavorite Emerald-Cut Line</div><div class="pstone">Tsavorite Garnets · Solid 18k Gold</div><div class="pprice">From $9,200</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Tsavorite Emerald-Cut Tennis Line','Taita Taveta Tsavorites · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div>
+      </div>
+
+      <div class="pcard rv d2">
+        <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Artisanal Gold Cuff">
+          <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Artisanal Gold Cuff</span></div>
+          <div class="poverlay"><button class="pobtn" onclick="openM('Swahili Coast Gold Bangle','Hammered 18k Gold · Bezel Gemstones')">Enquire</button></div>
+        </div>
+        <div class="pinfo"><div class="pcol">The Continuity</div><div class="pname">Swahili Coast Gold Bangle</div><div class="pstone">Hand-Hammered 18k Gold · Sapphire Accent</div><div class="pprice">From $4,800</div></div>
+        <div class="pacts"><a href="#" class="penq" onclick="openM('Swahili Coast Gold Bangle','Hammered 18k Gold · Bezel Gemstones');return false">Enquire</a><button class="pwish">♡</button></div>
+      </div>
+
     </div>
   </div>
 
@@ -665,7 +733,7 @@
           <div class="pbadge">Kenyan Origin</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Loose Tsavorite Garnet','0.5ct – 10ct · Unenhanced · Certificate Available')">Acquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Tsavorite Garnet</div><div class="pstone">0.5ct – 10ct · Taita Taveta Origin · Unenhanced</div><div class="pprice">From stock · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Tsavorite Garnet</div><div class="pstone">0.5ct – 10ct · Taita Taveta Origin · Unenhanced</div><div class="pprice">From $1,200 / ct</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('Loose Tsavorite Garnet','0.5ct – 10ct · Unenhanced · Certificate Available');return false">Acquire This Stone</a><button class="pwish">♡</button></div>
       </div>
 
@@ -674,7 +742,7 @@
           <div class="pbadge" style="background:#1a82a0">Rare</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Loose Teal Sapphire','0.3ct – 5ct · Garbatula, Kenya · Certificate Available')">Acquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Teal Sapphire</div><div class="pstone">0.3ct – 5ct · Garbatula, Kenya · Untreated</div><div class="pprice">From stock · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Teal Sapphire</div><div class="pstone">0.3ct – 5ct · Garbatula, Kenya · Untreated</div><div class="pprice">From $950 / ct</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('Loose Teal Sapphire','0.3ct – 5ct · Garbatula, Kenya · Certificate Available');return false">Acquire This Stone</a><button class="pwish">♡</button></div>
       </div>
 
@@ -683,7 +751,7 @@
           <div class="pbadge" style="background:#8c50a0">Colour-change</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Dragon Garnet','0.5ct – 5ct · Tanzanian Origin · Colour-change')">Acquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Dragon Garnet</div><div class="pstone">Colour-change · 0.5ct – 5ct · Tanzania</div><div class="pprice">From stock · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Dragon Garnet</div><div class="pstone">Colour-change · 0.5ct – 5ct · Tanzania</div><div class="pprice">From $1,400 / ct</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('Dragon Garnet','0.5ct – 5ct · Tanzanian Origin · Colour-change');return false">Acquire This Stone</a><button class="pwish">♡</button></div>
       </div>
 
@@ -692,7 +760,7 @@
           <div class="pbadge gold">Deep Blue</div>
           <div class="poverlay"><button class="pobtn" onclick="openM('Blue Spinel','0.5ct – 3ct · Tanzanian Origin · No Heat Treatment')">Acquire</button></div>
         </div>
-        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Blue Spinel</div><div class="pstone">Deep Blue · 0.5ct – 3ct · No Heat Treatment</div><div class="pprice">From stock · <span>Price on enquiry</span></div></div>
+        <div class="pinfo"><div class="pcol">Hatatian Gems · Loose Stone</div><div class="pname">Blue Spinel</div><div class="pstone">Deep Blue · 0.5ct – 3ct · No Heat Treatment</div><div class="pprice">From $1,100 / ct</div></div>
         <div class="pacts"><a href="#" class="penq" onclick="openM('Blue Spinel','0.5ct – 3ct · Tanzanian Origin · No Heat Treatment');return false">Acquire This Stone</a><button class="pwish">♡</button></div>
       </div>
 
@@ -722,20 +790,46 @@
     <div class="ci-icon">🌿</div>
     <div>
       <div class="ci-title">The Inspiration Behind the Green Garnet Collection</div>
-      <div class="ci-body">The Tsavo Green Collection takes its name and its soul from Kenya's Tsavo landscape. The green of a Tsavorite garnet at its finest carries the specific quality of equatorial light. Every piece in this collection is handcrafted in Kenya to let that green speak without interference — minimal settings, maximum stone, certified unenhanced Tsavorite set in 18k yellow gold.</div>
+      <div class="ci-body">The Tsavo Green Collection takes its name and its soul from Kenya's Tsavo landscape. The green of a Tsavorite garnet at its finest carries the specific quality of equatorial light. Every piece in this collection is handcrafted in Kenya to let that green speak without interference — minimal settings, maximum stone, certified unenhanced Tsavorite set in 18k yellow gold and platinum.</div>
     </div>
   </div>
 
   <div class="pgrid" style="margin-bottom:0">
+
     <div class="pcard rv">
-      <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="">
-        <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add Green Garnet piece photo</span></div>
+      <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Tsavorite Cathedral Ring">
+        <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite Cathedral Ring</span></div>
         <div class="pbadge">Tsavo Green</div>
-        <div class="poverlay"><button class="pobtn" onclick="openM('Piece Name','Tsavorite Garnet · 18k Yellow Gold')">Enquire</button></div>
+        <div class="poverlay"><button class="pobtn" onclick="openM('The Tsavo Sovereign Ring','2.5ct Cushion Tsavorite · 18k Gold Cathedral')">Enquire</button></div>
       </div>
-      <div class="pinfo"><div class="pcol">Tsavo Green</div><div class="pname">Piece Name</div><div class="pstone">Tsavorite Garnet · 18k Yellow Gold</div><div class="pprice">Bespoke commission · <span>Price on enquiry</span></div></div>
-      <div class="pacts"><a href="#" class="penq" onclick="openM('Piece Name','Tsavorite Garnet · 18k Yellow Gold');return false">Enquire</a><button class="pwish">♡</button></div>
+      <div class="pinfo"><div class="pcol">Tsavo Green · High Jewelry</div><div class="pname">The Tsavo Sovereign Ring</div><div class="pstone">2.5ct Cushion Tsavorite · 18k Gold</div><div class="pprice">From $6,800</div></div>
+      <div class="pacts"><a href="#" class="penq" onclick="openM('The Tsavo Sovereign Ring','2.5ct Cushion Tsavorite · 18k Gold Cathedral');return false">Enquire</a><button class="pwish">♡</button></div>
     </div>
+
+    <div class="pcard rv d1">
+      <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Tsavorite Halo Earrings">
+        <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite Halo Earrings</span></div>
+        <div class="pbadge">Tsavo Green</div>
+        <div class="poverlay"><button class="pobtn" onclick="openM('Verdant Halo Earrings','Unenhanced Tsavorites · Diamond Halo')">Enquire</button></div>
+      </div>
+      <div class="pinfo"><div class="pcol">Tsavo Green · Earrings</div><div class="pname">Verdant Halo Studs</div><div class="pstone">Tsavorite Garnets · Diamond Halo</div><div class="pprice">From $4,500</div></div>
+      <div class="pacts"><a href="#" class="penq" onclick="openM('Verdant Halo Earrings','Unenhanced Tsavorites · Diamond Halo');return false">Enquire</a><button class="pwish">♡</button></div>
+    </div>
+
+    <div class="pcard rv d2">
+      <div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt="Tsavorite Solitaire Pendant">
+        <div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite Solitaire Pendant</span></div>
+        <div class="pbadge">Tsavo Green</div>
+        <div class="poverlay"><button class="pobtn" onclick="openM('The Acacia Leaf Pendant','Tsavorite Garnet · 18k Gold Leaf Detail')">Enquire</button></div>
+      </div>
+      <div class="pinfo"><div class="pcol">Tsavo Green · Necklaces</div><div class="pname">The Acacia Leaf Pendant</div><div class="pstone">Tsavorite Garnet · 18k Yellow Gold</div><div class="pprice">From $3,200</div></div>
+      <div class="pacts"><a href="#" class="penq" onclick="openM('The Acacia Leaf Pendant','Tsavorite Garnet · 18k Gold Leaf Detail');return false">Enquire</a><button class="pwish">♡</button></div>
+    </div>
+
+    <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite Eternity Band</span></div><div class="pbadge">Tsavo Green</div><div class="poverlay"><button class="pobtn" onclick="openM('Tsavorite Emerald-Cut Eternity Band','Full Eternity Tsavorites · 18k Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Tsavo Green</div><div class="pname">Tsavorite Emerald Eternity Band</div><div class="pstone">Step-Cut Tsavorites · 18k Gold</div><div class="pprice">From $4,800</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Tsavorite Emerald-Cut Eternity Band','Full Eternity Tsavorites · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+    <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Tsavorite & Diamond Cuff</span></div><div class="pbadge">Tsavo Green</div><div class="poverlay"><button class="pobtn" onclick="openM('Tsavo Royal Cuff','Cushion Tsavorite · Diamond Accents')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Tsavo Green</div><div class="pname">Tsavo Royal Cuff</div><div class="pstone">Cushion Tsavorite · Diamond · 18k Gold</div><div class="pprice">From $8,900</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Tsavo Royal Cuff','Cushion Tsavorite · Diamond Accents');return false">Enquire</a><button class="pwish">♡</button></div></div>
+    <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO_HERE.jpg" alt=""><div class="pimg-ph"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Raw Tsavorite Crystal Ring</span></div><div class="pbadge">Tsavo Green</div><div class="poverlay"><button class="pobtn" onclick="openM('Uncut Tsavorite Crystal Ring','Natural Rough Tsavorite · 18k Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Tsavo Green</div><div class="pname">Uncut Tsavorite Crystal Ring</div><div class="pstone">Rough Tsavorite Crystal · 18k Gold</div><div class="pprice">From $2,900</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Uncut Tsavorite Crystal Ring','Natural Rough Tsavorite · 18k Gold');return false">Enquire</a><button class="pwish">♡</button></div></div>
+
   </div>
 </section>
 
@@ -1116,8 +1210,8 @@
       <ul class="flinks">
         <li><a href="#collections">Rings</a></li>
         <li><a href="#collections">Pendants & Necklaces</a></li>
-        <li><a href="#collections">Earrings</a></li>
-        <li><a href="#collections">Bracelets</a></li>
+        <li><a href="#collections">Earrings & Studs</a></li>
+        <li><a href="#collections">Bracelets & Bangles</a></li>
         <li><a href="#collections">Certified Loose Gems</a></li>
         <li><a href="#green-garnet">Tsavo Green Collection</a></li>
       </ul>
