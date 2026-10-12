@@ -313,6 +313,8 @@
       .story-body{padding:48px 20px!important}
       .story-body p{font-size:1rem!important}
       .story-body p:first-of-type{font-size:1.1rem!important}
+      .pillars{grid-template-columns:1fr!important}
+      .story-h{font-size:1.35rem}
       /* Pull quote */
       .pull-quote{font-size:1.1rem!important}
       /* H sizes */
@@ -401,6 +403,11 @@
     .story-body{padding:80px 56px;max-width:820px;margin:0 auto}
     .story-body p{font-family:var(--body);font-size:1.12rem;line-height:1.9;color:var(--im);margin-bottom:24px}
     .story-body p:first-of-type{font-size:1.3rem;color:var(--ink)}
+    .story-h{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.2;color:var(--gd);margin:48px 0 18px}
+    .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
+    .pillar{background:var(--gp);border-top:3px solid var(--g);padding:26px 22px}
+    .pillar-h{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--g);font-weight:500;margin-bottom:8px}
+    .pillar-b{font-family:var(--body);font-size:.95rem;line-height:1.6;color:var(--im)}
 
     /* FOOTER */
     footer{background:var(--ink);padding:72px 56px 0}
@@ -489,9 +496,9 @@
     <div class="hero-left">
       <div class="hero-eyebrow">Stewards of Ethics for African Gemstones</div>
       <h1 class="h1" style="font-size:clamp(2.8rem,4.5vw,5rem);margin-bottom:22px">
-        Where rare<br>gemstones<br>find <em>their form.</em>
+        Behind every stone,<br>a pair of <em>hands.</em>
       </h1>
-      <p class="hero-tagline">A private jewelry house rooted in Kenya's living earth. We welcome you — not into a shop, but into an experience of the extraordinary.</p>
+      <p class="hero-tagline">Every great piece begins with people the world rarely sees — the miners, the cutters, the goldsmiths. Hatatian is a woman-led house, made in Kenya, built to honor them. Step into the side of luxury that has always stayed hidden.</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="#" onclick="showPage('collections');return false" class="btn btn-solid">Enter the World of Hatatian</a>
         <a href="#" onclick="showPage('story');return false" class="btn btn-ghost-w">Read Our Story</a>
@@ -519,11 +526,11 @@
       <div class="story-img-tag">Founder<br><span style="font-size:.75rem;opacity:.65">Hanly Mutsune</span></div>
     </div>
     <div class="story-text">
-      <div class="label rv">A Daughter's Promise</div>
-      <h2 class="h2 rv d1">Born from love.<br>Built for <em>eternity.</em></h2>
-      <p class="prose rv d2">Hatatian Jewelry began not as a business, but as a promise. When Hanly Mutsune lost her mother — a woman who wore jewelry the way others wear their hearts — she turned grief into something lasting. She began making jewelry herself, first from brass in local Kenyan markets, eventually working her way toward the rare and the extraordinary.</p>
-      <div class="pull-quote rv d2">"My mother loved jewelry. This is my way of continuing that love — through stones that outlive the moment they are given."</div>
-      <p class="prose rv d3">Eight years later, Hatatian is a private jewelry house rooted in ethical East African gemstones and built on a single belief: that every piece should carry a story as remarkable as the stone inside it.</p>
+      <div class="label rv">The Hands Behind the Stone</div>
+      <h2 class="h2 rv d1">Luxury has a hidden side.<br>We put it <em>in the light.</em></h2>
+      <p class="prose rv d2">Hanly Mutsune began at 20, a student in Nairobi looking for a way to earn, selling brass jewelry to classmates and anyone who would buy. As she learned the trade, she built a collection of her own — and found the side of luxury jewelry the world rarely sees: artisans who mine, cut and craft the finest gemstones and gold, carrying knowledge passed down through generations.</p>
+      <div class="pull-quote rv d2">"These are quiet people living simple lives. They create pieces the world celebrates, and never see a fraction of what those pieces become. They are my why."</div>
+      <p class="prose rv d3">Today Hatatian is a woman-led house, made in Kenya, built to give those hands the credit — and the fair reward — they have always deserved. It has been featured on NTV Kenya and in The Nomad magazine, but the work has not changed: every stone traced, every maker honored, ethics as the foundation of the craft.</p>
       <div style="margin-top:36px" class="rv d3">
         <a href="#" onclick="showPage('story');return false" class="btn btn-ghost-g">Read the Full Story</a>
       </div>
@@ -686,7 +693,7 @@
     </div>
     <div class="fbot">
       <div class="fcopy">© 2026 Hatatian Jewelry . All rights reserved.</div>
-      <div class="fstrap">A daughter's promise. An African legacy.</div>
+      <div class="fstrap">The hands behind the stone. An African legacy.</div>
     </div>
   </footer>
 
@@ -760,9 +767,10 @@
         </div>
        <div class="pcard rv d1">
   <div class="pimg">
-    <img src="tsavorhalo.jpg" alt="The Tsavorite Heirloom">
+    <img src="tsavorhalo.jpg" alt="The Tsavorite Heirloom" onerror="this.style.display='none'">
+    <div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>The Tsavorite Heirloom</span></div>
     <div class="pbadge">Signature</div>
-    <div class="poverlay"><button class="pobtn" onclick="openM('Green Garnet Ring','Tsavorite Garnet · Your choice of gold')">Enquire</button></div>
+    <div class="poverlay"><button class="pobtn" onclick="openM('The Tsavorite Heirloom','Tsavorite Garnet · 18k Yellow Gold')">Enquire</button></div>
   </div>
   <div class="pinfo">
     <div class="pcol">Green Garnet · Rings</div>
@@ -772,15 +780,12 @@
     <div class="pcustom">Available in white, rose or yellow gold</div>
   </div>
   <div class="pacts">
-    <a href="#" class="penq" onclick="openM('The Tsavo Solitaire','Tsavorite Garnet · 18k Yellow Gold');return false">Begin This Piece</a>
+    <a href="#" class="penq" onclick="openM('The Tsavorite Heirloom','Tsavorite Garnet · 18k Yellow Gold');return false">Begin This Piece</a>
     <button class="pwish">♡</button>
   </div>
 </div>
         <!-- add more rings here — copy pcard block, replace name/price/src -->
         <div class="pcard rv d2"><div class="pimg"><img src="3tsavo.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add ring photo</span></div><div class="pbadge">Green Garnet</div><div class="poverlay"><button class="pobtn" onclick="openM('Green Garnet Ring','Tsavorite · Your choice of gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Rings</div><div class="pname">Ring Name</div><div class="pstone">Tsavorite Garnet · Gold</div><div class="pprice">KES — · USD —</div><div class="pcustom">Customizable</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add ring photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Green Garnet Ring','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Rings</div><div class="pname">Ring Name</div><div class="pstone">Tsavorite Garnet · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add ring photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Green Garnet Ring','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Rings</div><div class="pname">Ring Name</div><div class="pstone">Tsavorite Garnet · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add ring photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Green Garnet Ring','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Rings</div><div class="pname">Ring Name</div><div class="pstone">Tsavorite Garnet · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Ring Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
       </div>
     </div>
 
@@ -788,9 +793,6 @@
       <div class="pgrid">
         <div class="pcard rv"><div class="pimg"><img src="tsavoritepend.jpeg" alt="Tsavorite Medallion"><div class="pbadge intl" style="background:var(--gd)">Bestseller</div><div class="poverlay"><button class="pobtn" onclick="openM('The Tsavorite Medallion','Tsavorite Garnet · 18k Yellow Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Necklaces</div><div class="pname">The Tsavorite Medallion</div><div class="pstone">Tsavorite Garnet · 18k Yellow Gold</div><div class="pprice">KES 227,500 · USD 1,750</div><div class="pcustom">Customizable in all golds</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('The Tsavorite Medallion','Tsavorite Garnet · 18k Yellow Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
         <div class="pcard rv d1"><div class="pimg"><img src="manneck.jpeg" alt="Verdant Sentinel"><div class="poverlay"><button class="pobtn" onclick="openM('The Verdant Sentinel','Tsavorite · 18k Yellow Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Men's Necklace</div><div class="pname">The Verdant Sentinel</div><div class="pstone">Tsavorite · 18k Yellow Gold Bezel</div><div class="pprice">KES 185,770 · USD 1,429</div><div class="pcustom">Customizable</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('The Verdant Sentinel','Tsavorite · 18k Yellow Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add necklace photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Necklace Name','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Necklaces</div><div class="pname">Necklace Name</div><div class="pstone">Tsavorite · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Necklace Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add necklace photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Necklace Name','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Necklaces</div><div class="pname">Necklace Name</div><div class="pstone">Tsavorite · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Necklace Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add necklace photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Necklace Name','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Necklaces</div><div class="pname">Necklace Name</div><div class="pstone">Tsavorite · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Necklace Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
         <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add necklace photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Necklace Name','Tsavorite · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Green Garnet · Necklaces</div><div class="pname">Necklace Name</div><div class="pstone">Tsavorite · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Necklace Name','Tsavorite · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
       </div>
     </div>
@@ -846,8 +848,6 @@
     <div class="col-tabs">
       <button class="col-tab active" data-panel="other-rings">Rings</button>
       <button class="col-tab" data-panel="other-pendants">Pendants</button>
-      <button class="col-tab" data-panel="other-earrings">Earrings</button>
-      <button class="col-tab" data-panel="other-bracelets">Bracelets</button>
       <button class="col-tab" data-panel="gemstones-shop">Loose Gems & Diamonds</button>
     </div>
 
@@ -871,21 +871,7 @@
       </div>
     </div>
 
-    <div class="col-panel" id="other-earrings">
-      <div class="pgrid">
-        <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add earring photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Earring Name','Stone · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection</div><div class="pname">Earring Name</div><div class="pstone">Stone · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Earring Name','Stone · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d1"><div class="pimg"><img src="IMG_8671.jpeg" alt=""><div class="poverlay"><button class="pobtn" onclick="openM('Earring Name','Stone · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection</div><div class="pname">Earring Name</div><div class="pstone">Stone · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Earring Name','Stone · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add earring photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Earring Name','Stone · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection</div><div class="pname">Earring Name</div><div class="pstone">Stone · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Earring Name','Stone · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-      </div>
-    </div>
 
-    <div class="col-panel" id="other-bracelets">
-      <div class="pgrid">
-        <div class="pcard rv"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add bracelet photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Bracelet Name','Stone · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection</div><div class="pname">Bracelet Name</div><div class="pstone">Stone · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Bracelet Name','Stone · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d1"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add bracelet photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Bracelet Name','Stone · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection</div><div class="pname">Bracelet Name</div><div class="pstone">Stone · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Bracelet Name','Stone · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d2"><div class="pimg"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add bracelet photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Bracelet Name','Stone · Gold')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Collection</div><div class="pname">Bracelet Name</div><div class="pstone">Stone · Gold</div><div class="pprice">KES — · USD —</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Bracelet Name','Stone · Gold');return false">Begin This Piece</a><button class="pwish">♡</button></div></div>
-      </div>
-    </div>
 
     <div class="col-panel" id="gemstones-shop">
       <div class="col-inspo rv">
@@ -898,10 +884,6 @@
         <div class="pcard rv d1"><div class="pimg" style="aspect-ratio:1/1"><img src="teal1.jpeg" alt="Teal Sapphire"><div class="pbadge" style="background:#1a82a0">Rare</div><div class="poverlay"><button class="pobtn" onclick="openM('Loose Teal Sapphire','0.3ct – 5ct · Garbatula, Kenya')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose</div><div class="pname">Teal Sapphire</div><div class="pstone">0.3ct – 5ct · Garbatula, Kenya</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Loose Teal Sapphire','0.3ct – 5ct');return false">Enquire</a><button class="pwish">♡</button></div></div>
         <div class="pcard rv d2"><div class="pimg" style="aspect-ratio:1/1"><img src="dragon22.jpeg" alt="Dragon Garnet"><div class="pbadge" style="background:#8c50a0">Colour-change</div><div class="poverlay"><button class="pobtn" onclick="openM('Dragon Garnet','0.5ct – 5ct · Tanzania')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose</div><div class="pname">Dragon Garnet</div><div class="pstone">Colour-change · 0.5ct – 5ct · Tanzania</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Dragon Garnet','0.5ct – 5ct');return false">Enquire</a><button class="pwish">♡</button></div></div>
         <div class="pcard rv d3"><div class="pimg" style="aspect-ratio:1/1"><img src="spinel2.jpeg" alt="Blue Spinel"><div class="pbadge gold">Deep Blue</div><div class="poverlay"><button class="pobtn" onclick="openM('Blue Spinel','0.5ct – 3ct · Tanzania')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose</div><div class="pname">Blue Spinel</div><div class="pstone">Deep Blue · 0.5ct – 3ct · Tanzania</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Blue Spinel','0.5ct – 3ct');return false">Enquire</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv"><div class="pimg" style="aspect-ratio:1/1;background:#f0f0f4"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph" style="background:#f0f0f4;border-color:rgba(100,100,160,.2)"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(100,100,160,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(100,100,160,.3)" stroke-width="1.5"/></svg><span style="color:rgba(100,100,160,.4)">Loose Diamond</span></div><div class="pbadge diamond">Diamond</div><div class="poverlay"><button class="pobtn" onclick="openM('Loose Diamond','Various cuts & sizes available')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose Diamond</div><div class="pname">White Diamond</div><div class="pstone">Various cuts · GIA certification available</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq" style="background:#2a2a4a" onclick="openM('Loose Diamond','Various cuts & sizes');return false">Enquire</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d1"><div class="pimg" style="aspect-ratio:1/1;background:#111"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph dark-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/></svg><span>Loose Black Diamond</span></div><div class="pbadge dark">Black Diamond</div><div class="poverlay"><button class="pobtn" onclick="openM('Loose Black Diamond','Various cuts & sizes available')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose Diamond</div><div class="pname">Black Diamond</div><div class="pstone">Various cuts · Certification available</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq dark-btn" onclick="openM('Loose Black Diamond','Various cuts & sizes');return false">Enquire</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d2"><div class="pimg" style="aspect-ratio:1/1"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add gemstone photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Gemstone Name','Origin · ct range')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose</div><div class="pname">Gemstone Name</div><div class="pstone">Origin · ct range</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Gemstone Name','ct range');return false">Enquire</a><button class="pwish">♡</button></div></div>
-        <div class="pcard rv d3"><div class="pimg" style="aspect-ratio:1/1"><img src="YOUR_PHOTO.jpg" alt=""><div class="pimg-ph"><svg width="36" height="36" viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="2" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/><circle cx="20" cy="20" r="6" stroke="rgba(26,92,58,.3)" stroke-width="1.5"/></svg><span>Add gemstone photo</span></div><div class="poverlay"><button class="pobtn" onclick="openM('Gemstone Name','Origin · ct range')">Enquire</button></div></div><div class="pinfo"><div class="pcol">Hatatian Gems · Loose</div><div class="pname">Gemstone Name</div><div class="pstone">Origin · ct range</div><div class="pprice enquiry">Price on enquiry · delivery 3–4 days</div></div><div class="pacts"><a href="#" class="penq" onclick="openM('Gemstone Name','ct range');return false">Enquire</a><button class="pwish">♡</button></div></div>
       </div>
     </div>
   </section>
@@ -913,7 +895,7 @@
       <div><div class="fct">Collections</div><ul class="flinks"><li><a href="#" onclick="scrollToCollection('green-garnet');return false">Green Garnet</a></li><li><a href="#" onclick="scrollToCollection('black-diamond');return false">Black Diamond</a></li><li><a href="#" onclick="scrollToCollection('diamond');return false">Diamond</a></li></ul></div>
       <div><div class="fct">Hatatian Gems</div><ul class="flinks"><li><a href="#" onclick="showPage('gemstones');return false">Tsavorite Garnet</a></li><li><a href="#" onclick="showPage('gemstones');return false">Teal Sapphire</a></li><li><a href="#" onclick="showPage('gemstones');return false">Dragon Garnet</a></li><li><a href="#" onclick="showPage('gemstones');return false">Loose Diamonds</a></li></ul></div>
     </div>
-    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited. All rights reserved.</div><div class="fstrap">A daughter's promise. An African legacy.</div></div>
+    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited. All rights reserved.</div><div class="fstrap">The hands behind the stone. An African legacy.</div></div>
   </footer>
 
 </div><!-- end page-collections -->
@@ -998,7 +980,7 @@
       <div><div class="fct">Navigate</div><ul class="flinks"><li><a href="#" onclick="showPage('home');return false">Home</a></li><li><a href="#" onclick="showPage('collections');return false">Collections</a></li><li><a href="#" onclick="showPage('story');return false">Our Story</a></li><li><a href="#" onclick="showPage('contact');return false">Book a Viewing</a></li></ul></div>
       <div></div><div></div>
     </div>
-    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">A daughter's promise. An African legacy.</div></div>
+    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">The hands behind the stone. An African legacy.</div></div>
   </footer>
 
 </div><!-- end page-gemstones -->
@@ -1012,25 +994,40 @@
   <div class="story-page-hero">
     <img src="weartsavorite.jpeg" alt="Hanly Mutsune">
     <div class="story-page-content">
-      <div class="label light rv">A Daughter's Promise</div>
-      <h1 class="h1 rv d1" style="font-size:clamp(2.8rem,5vw,5rem)">The story<br>behind <em>Hatatian.</em></h1>
+      <div class="label light rv">The Hands Behind the Stone</div>
+      <h1 class="h1 rv d1" style="font-size:clamp(2.8rem,5vw,5rem)">The hands behind<br>every <em>stone.</em></h1>
     </div>
   </div>
 
   <div class="story-body">
-    <p>Hatatian Jewelry was not built from a business plan. It was built from grief, and love, and a daughter's need to do something with both of them.</p>
-    <p>When Hanly Mutsune lost her mother eight years ago, she lost the person in her life who understood jewelry the way most people understand language — as a form of expression, of identity, of love made visible. Her mother wore pieces the way others wear their hearts on their sleeve. She knew what a ring meant on a particular finger. She understood the difference between something worn and something carried.</p>
-    <p>After her mother passed, Hanly began making jewelry herself. Not as a business at first — as a practice. She started with brass, in Kenyan local markets, learning the craft the same way she learned everything else: by doing it until she understood it. Over eight years, the work deepened. The materials became rarer. The clients became fewer and more serious. The stones became the story.</p>
-    <div class="pull-quote">"My mother loved jewelry. This is my way of continuing that love — through stones that outlive the moment they are given."</div>
-    <p>Today, Hatatian is a private jewelry house built on ethical East African gemstones. We are based in Mombasa. We work by appointment only — virtually, from anywhere in the world. We take on a limited number of commissions each season because each one deserves full attention.</p>
-    <p>We specialise in gemstones that Africa has given the world and that the world has not always credited back to Africa. Tsavorite garnet — discovered in Kenya's Taita Taveta region — is 200 times rarer than emerald, and still not a household name. Teal sapphires from Garbatula. Dragon garnets from Tanzania. Spinel, aquamarine, and diamonds from across the continent. Stones with provenance, with character, with a full chain of custody from the hands that found them to yours.</p>
+    <p>Behind every piece of fine jewelry is a chain of human hands. Hatatian exists because Hanly Mutsune saw how rarely those hands are thanked.</p>
+    <p>She was 20, a student in Nairobi, looking for a way to earn an extra living. She began selling brass jewelry to other students, to people she knew, and soon to people she didn't. As she came to understand the trade, she started building a collection of her own — and the more she learned, the further she was drawn from the surface of the business and into what sits beneath it.</p>
+    <p>What she found was a hidden, closely guarded side of luxury jewelry, rooted in artisanal and generational knowledge: the people who mine gemstones, the cutters who bring out the finest quality from rough stone, the goldsmiths who turn it into something worth wearing. They walk quietly and live simply. They rarely receive the recognition they deserve, because the world has never been taught to look for them. They make pieces for the outside world — and never see a fraction of what those pieces become.</p>
+    <div class="pull-quote">"The people are what matter. They mine the stones, cut the best of them and craft the pieces — and they deserve to be seen."</div>
+    <p>That is Hatatian's why. It is a woman-led house, made in Kenya, built to honor those makers, to pay them fairly and to put their skill in the light. Hanly's late mother — who understood jewelry as a language of love — lives on in that legacy. But it is the people, and their craft, that the house exists for.</p>
+
+    <h3 class="story-h">Craft, held to a standard</h3>
+    <p>Hatatian began in Nairobi, Hanly's home city, and later moved to Mombasa — for room to expand and to work alongside deeper skill and craftsmanship. A Hatatian piece is never assembled from a catalogue. It begins with a private one-on-one consultation, moves through stone selection and a CAD design you approve before anything is cut, and is crafted and finished to be worn for a lifetime — then handed down. We take on a limited number of commissions each season because every one deserves full attention, and because skill is not something you can rush.</p>
+
+    <h3 class="story-h">Ethics, even when no one is asking</h3>
+    <p>The gemstone industry is not held accountable the way it should be. Too often no one is required to answer where a stone came from, who found it, or whether they were paid fairly for it — and Africa has watched its most precious resources leave with too little returned to the communities that uncovered them.</p>
+    <p>Hatatian chooses to answer anyway. We source directly. We pay fairly — because the miners, cutters and goldsmiths are the reason any of it exists. We trace every stone from the hands that found it to yours, and every stone is natural, unenhanced and untreated, with certification available on request. Tsavorite garnet — from Kenya's Taita Taveta region and 200 times rarer than emerald — is still not a household name. We exist, in part, to change that, and to make sure Africa is credited for what it gives the world.</p>
+
+    <h3 class="story-h">A name built the honest way</h3>
+    <p>That commitment has been noticed. Hatatian has been featured on NTV Kenya, and in The Nomad magazine's East Africa and South Africa editions, and in February 2027 we take the house to New York Fashion Week. We are proud of every one of those moments — and we hold ourselves to the same standard in each: the story behind a piece has to be as remarkable as the stone inside it.</p>
     <p>This is not simply a jewelry business. It is a way of honoring the earth that produced these stones, the people who found them, and the woman who first showed a young girl that what you wear can be an act of love.</p>
+
+    <div class="pillars">
+      <div class="pillar"><div class="pillar-h">Woman-led</div><div class="pillar-b">Founded in Nairobi by Hanly Mutsune, now based in Mombasa.</div></div>
+      <div class="pillar"><div class="pillar-h">Made in Kenya</div><div class="pillar-b">Designed and crafted here, with African gemstones.</div></div>
+      <div class="pillar"><div class="pillar-h">Ethically traced</div><div class="pillar-b">Direct sourcing, fair pay, full chain of custody.</div></div>
+    </div>
 
     <div style="margin-top:56px;border-top:1px solid var(--bd);padding-top:48px">
       <div class="stats">
         <div class="stat"><div class="stat-n">8</div><div class="stat-l">Years of craft</div></div>
         <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Ethically traced</div></div>
-        <div class="stat"><div class="stat-n">1:1</div><div class="stat-l">Every consultation</div></div>
+        <div class="stat"><div class="stat-n">KE</div><div class="stat-l">Made in Kenya</div></div>
         <div class="stat"><div class="stat-n">200×</div><div class="stat-l">Tsavorite rarer than emerald</div></div>
       </div>
     </div>
@@ -1047,7 +1044,7 @@
       <div><div class="fct">Navigate</div><ul class="flinks"><li><a href="#" onclick="showPage('home');return false">Home</a></li><li><a href="#" onclick="showPage('collections');return false">Collections</a></li><li><a href="#" onclick="showPage('gemstones');return false">Gemstones</a></li><li><a href="#" onclick="showPage('contact');return false">Book a Viewing</a></li></ul></div>
       <div></div><div></div>
     </div>
-    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">A daughter's promise. An African legacy.</div></div>
+    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">The hands behind the stone. An African legacy.</div></div>
   </footer>
 
 </div><!-- end page-story -->
@@ -1134,7 +1131,7 @@
       <div><div class="fct">Navigate</div><ul class="flinks"><li><a href="#" onclick="showPage('home');return false">Home</a></li><li><a href="#" onclick="showPage('collections');return false">Collections</a></li><li><a href="#" onclick="showPage('story');return false">Our Story</a></li><li><a href="#" onclick="showPage('contact');return false">Book a Viewing</a></li></ul></div>
       <div></div><div></div>
     </div>
-    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">A daughter's promise. An African legacy.</div></div>
+    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">The hands behind the stone. An African legacy.</div></div>
   </footer>
 
 </div><!-- end page-press -->
@@ -1314,7 +1311,7 @@
       <div><div class="fct">Navigate</div><ul class="flinks"><li><a href="#" onclick="showPage('home');return false">Home</a></li><li><a href="#" onclick="showPage('collections');return false">Collections</a></li><li><a href="#" onclick="showPage('gemstones');return false">Gemstones</a></li><li><a href="#" onclick="showPage('story');return false">Our Story</a></li><li><a href="#" onclick="showPage('press');return false">Press</a></li></ul></div>
       <div></div><div></div>
     </div>
-    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">A daughter's promise. An African legacy.</div></div>
+    <div class="fbot"><div class="fcopy">© 2026 Hatatian Jewelry · Hanshen Limited.</div><div class="fstrap">The hands behind the stone. An African legacy.</div></div>
   </footer>
 
 </div><!-- end page-contact -->
