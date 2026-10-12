@@ -709,20 +709,23 @@
       </div>
     </div>
     <!-- Replace YOUR_PHOTO.jpg with a hero collections image -->
-    <div style="position:relative;overflow:hidden;min-height:400px;background:var(--gp)">
-      <img src="dianeckmain.jpg" alt="Hatatian Collections" style="width:100%;height:100%;object-fit:cover;display:block">
- <div style="position:relative;overflow:hidden;min-height:400px;">
+    <div style="position:relative;overflow:hidden;min-height:400px;...">
   <img src="dianeckmain.jpg" alt="Hatatian Collections" style="width:100%;height:100%;object-fit:cover;display:block">
-</div>
-    </div>
+  <div id="col-hero-ph" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;background:var(--gp);">
+    <svg width="48" height="48" viewBox="0 0 40 40" fill="none">...</svg>
+    <span style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;">ADD YOUR COLLECTIONS HERO IMAGE HERE</span>
   </div>
+</div>
+</div>
+
   <style>
     @media(max-width:960px){
       .col-page-hero{grid-template-columns:1fr!important}
       .col-page-hero>div:last-child{min-height:52vw}
     }
     /* Hide placeholder once a real image is loaded */
-    .col-page-hero img:([src="dianeckmain.jpg"])[src]~#col-hero-ph{display:none}
+  .col-page-hero img:not([src="dianeckmain.jpg"])[src]~#col-hero-ph{display:none}
+```
   </style>
 
   <div class="mq">
